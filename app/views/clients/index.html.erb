@@ -1,0 +1,39 @@
+<div class="client-list">
+  <h2>Clients List</h2>
+
+  <table class="listing-clients" summary="Client List">
+    <tr class="header">
+      <th>First Name | </th>
+      <th>Last Name | </th>
+      <th>Address | </th>
+      <th>City | </th>
+      <th>State | </th>
+      <th>Zip | </th>
+      <th>Cell Phone | </th>
+      <th>Home Phone | </th>
+      <th>Email  | </th>
+      <th>Actions   </th>
+    </tr>
+    <% @clients.each do |client| %>
+    <tr>
+      <td><%= client.first_name %></td>
+      <td><%= client.last_name %></td>
+      <td><%= client.street_address %></td>
+      <td><%= client.city %></td>
+      <td><%= client.state %></td>
+      <td><%= client.zip %></td>
+      <td><%= client.cell_phone %></td>
+      <td><%= client.home_phone %></td>
+      <td><%= client.client_email %></td>
+        <td class="controls">
+          <%= link_to "View", client_path(client), class: 'action-view'  %>
+          <%= link_to "Edit", edit_client_path(client), class: 'action-edit' %>
+          <%= link_to "Delete", client_path(client), class: 'action-delete', :method => :delete, :confirm => "Are you sure?" %>
+        </td>
+    </tr>
+  <% end %>
+  </table>
+  </div>
+</div><!-- end client-list -->
+
+

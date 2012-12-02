@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: services
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  price       :decimal(, )
+#  stylist_id  :integer
+#  description :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  price: 9.99
+  stylist_id: 1
+  description: MyText
+
+two:
+  name: MyString
+  price: 9.99
+  stylist_id: 1
+  description: MyText

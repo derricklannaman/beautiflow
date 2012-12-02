@@ -1,0 +1,46 @@
+<div class="form">
+
+  <% if @stylist.errors.any? %>
+    <ul>
+     <ul>
+        <% for message in @stylist.errors.full_messages %>
+        <li><%= message %></li></ul>
+        <% end %>
+      </ul>
+  <% end %>
+
+<%= form_for @stylist do |f| %>
+  <div class="field">
+    <%= f.label :first_name, "First name:" %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name, "Last name:" %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stylist_email, "Email:" %>
+    <%= f.text_field :stylist_email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Password" %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= submit_tag "Sign Up"%>
+  </div>
+</div>
+<% end %>
+<br>
+<div>
+  <%= link_to "Go to Home Page", root_path %>
+</div>

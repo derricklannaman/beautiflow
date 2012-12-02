@@ -1,0 +1,16 @@
+<h1>All Stylists</h1>
+
+  <% @stylists.each do |stylist| %>
+    <div class="field">
+      Full Name:
+      <%= link_to stylist.first_name, stylist_path(stylist) %> <%= stylist.last_name %>
+    </div>
+
+    <div class="field">
+      Email:
+      <%= stylist.stylist_email %>
+    </div>
+
+
+    ============================
+  <% end %>

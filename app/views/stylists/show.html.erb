@@ -1,0 +1,28 @@
+<h1><%= @authenticated_user.try(:first_name) %> Dashboard View</h1>
+
+<div>
+  First:
+  <%= @stylist.first_name %><br>
+</div>
+<div>
+  Last:
+  <%= @stylist.last_name %><br>
+</div>
+<div>
+  email:
+  <%= @stylist.stylist_email %>
+</div>
+
+<div class="field">
+  <%= link_to "Manage Clients", clients_path %>
+</div>
+<div>
+  <%= link_to "Edit my Profile", edit_stylist_path %>
+</div>
+<div>
+  <%= link_to "Go back", new_stylist_path %>
+</div>
+
+<div>
+  <%= link_to "Delete my Account", stylist_path(@stylist), :method => :delete, :confirm => "Are you sure?"  %>
+</div>

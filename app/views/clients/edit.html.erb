@@ -1,2 +1,16 @@
-<h1>Clients#edit</h1>
-<p>Find me in app/views/clients/edit.html.erb</p>
+<h1>Edit client</h1>
+
+<%= form_for @client do |f| %>
+<%= render :partial => 'shared/form_client', :locals => {:f => f} %>
+
+<div class="form_buttons">
+  <%= submit_tag "Update Client"%>
+</div>
+<% end %>
+
+<div>
+ <%= link_to "Back Manage Client", clients_path %>
+</div>
+<div>
+ <%= link_to "Back to dashboard", stylist_path %>
+</div>

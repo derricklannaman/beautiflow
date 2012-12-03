@@ -1,21 +1,21 @@
 <h1><%= @authenticated_user.try(:first_name) %> Dashboard View</h1>
 
 <div>
-  First:
-  <%= @stylist.first_name %><br>
-</div>
-<div>
-  Last:
-  <%= @stylist.last_name %><br>
-</div>
+  <h3><%= @stylist.first_name %> <%= @stylist.last_name %></h3>
+    Member since:
+    <%= member_since  %>
+</div><br>
 <div>
   email:
   <%= @stylist.stylist_email %>
 </div>
 
+
+
 <div class="field">
-  <%= link_to "Manage Clients", clients_path %>
-</div>
+  <%= link_to "Manage Existing Clients", clients_path %>
+</div><br>
+
 <div>
   <%= link_to "Edit my Profile", edit_stylist_path %>
 </div>

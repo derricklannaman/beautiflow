@@ -23,4 +23,6 @@ class Client < ActiveRecord::Base
 
   belongs_to :stylist
   has_many   :services, :through => :transactions
+
+
 end

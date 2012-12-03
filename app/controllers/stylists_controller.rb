@@ -1,5 +1,5 @@
 class StylistsController < ApplicationController
-
+  #before_filter :authenticate_user
   def index
     @stylists = Stylist.all
   end
@@ -37,7 +37,7 @@ class StylistsController < ApplicationController
 
   def destroy
     Stylist.find(params[:id]).destroy
-    #flash[:notice] = "Account deleted!"
+    flash[:notice] = "Account deleted!"
     redirect_to root_path
   end
 end

@@ -7,17 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="span3">
 
-  <%= show_dynamic_links %>
+      </div><!-- end "span3" -->
 
-  <% if !flash[:notice].blank? %>
-  <div>
-   <%= flash[:notice] %>
-  </div>
-  <% end %>
+      <div class="span9">
+        <%= show_dynamic_links %>
+         <%= render 'flash' %> <!--flash message partial -->
 
+          <%= yield %>
 
-<%= yield %>
+      </div><!-- end "span9" -->
+
+  </div><!-- end container -->
 
 </body>
 </html>

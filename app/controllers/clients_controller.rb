@@ -10,7 +10,7 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(params[:client])
     if @client.save
-      redirect_to clients_path
+      redirect_to @client
     else
       render :new
     end
@@ -28,11 +28,11 @@ class ClientsController < ApplicationController
 
   def show
     @client = Client.find(params[:id])
-    redirect_to client_path(@client)
   end
 
   def destroy
     Client.find(params[:id]).destroy
     redirect_to clients_path
   end
+
 end

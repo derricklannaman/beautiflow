@@ -1,7 +1,5 @@
 Beautiflow::Application.routes.draw do
 
-  #get '/stylists/:id' => 'stylist#show???'
-
   root :to => 'pages#index'
 
   scope :controller    => :pages do

@@ -1,15 +1,9 @@
+<div>
+  <%= link_to "Go to Home Page", root_path %>
+</div>
+<br>
 <div class="form">
 
-  <% if @stylist.errors.any? %>
-    <ul>
-     <ul>
-        <% for message in @stylist.errors.full_messages %>
-        <li><%= message %></li></ul>
-        <% end %>
-      </ul>
-  <% end %>
-
-<%= form_for @stylist do |f| %>
   <div class="field">
     <%= f.label :first_name, "First name:" %>
     <%= f.text_field :first_name %>
@@ -34,13 +28,5 @@
     <%= f.label :password_confirmation, "Confirmation" %>
     <%= f.password_field :password_confirmation %>
   </div>
+</div>
 
-  <div class="field">
-    <%= submit_tag "Sign Up"%>
-  </div>
-</div>
-<% end %>
-<br>
-<div>
-  <%= link_to "Go to Home Page", root_path %>
-</div>

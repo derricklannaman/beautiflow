@@ -1,7 +1,8 @@
 class ServicesController < ApplicationController
 
   def index
-    @services = Service.all
+    stylist = Stylist.find(params[:stylist_id])
+    @services = stylist.services
   end
 
   def new

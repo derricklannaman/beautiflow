@@ -1,4 +1,7 @@
 class StylistsController < ApplicationController
+
+  before_filter :authenticate_user, :only => [:show, :edit, :update, :delete]
+
   def index
     @stylists = Stylist.all
   end

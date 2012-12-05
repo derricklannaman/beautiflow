@@ -1,8 +1,38 @@
 <h1>Add new Clients</h1>
 
 <div class="form">
-  <%= form_for @client do |f| %>
-  <%= render :partial => 'form', :locals => {:f => f} %>
+  <%= form_for([@stylist, @client]) do |f| %>
+<div class="form">
+   <div class='field'>
+    <%= f.label :first_name, "First Name" %>
+    <%= f.text_field :first_name %>
+
+    <%= f.label :last_name, "Last Name" %>
+    <%= f.text_field :last_name %>
+   </div>
+
+  <div class='field'>
+    <%= f.label :street_address, "Street Address" %>
+    <%= f.text_field :street_address %>
+    <%= f.label :city, "City" %>
+    <%= f.text_field :city %>
+    <%= f.label :zip, "Zip" %>
+    <%= f.text_field :zip %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :cell_phone, "Cell Phone" %>
+    <%= f.text_field :cell_phone %>
+
+    <%= f.label :home_phone, "Home Phone" %>
+    <%= f.text_field :home_phone %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :client_email, "Email" %>
+    <%= f.email_field :client_email %>
+  </div>
+</div>
 
   <div class="form_buttons">
     <%= f.submit "Add Client Now" %>
@@ -12,14 +42,9 @@
 
 <!-- Links back to manage clients and dashboard -->
   <div>
-    <%= link_to "Back Manage Client", stylist_clients_path %>
+    <%#= link_to "Back Manage Client", stylist_clients_path %>
   </div>
-  <div>
-    <%#= link_to "Back Manage Client", clients_path %>
-  </div>
-  <div>
-    <%#= link_to "Back to dashboard", stylist_path %>
-  </div>
+
 
 
 

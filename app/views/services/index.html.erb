@@ -1,0 +1,11 @@
+<h1>Services</h1>
+<%= form_for @services do |f| %>
+
+<p>
+  <%= f.label :chemical_services  %><br>
+  <%= f.select :chemical_services,[ ['Relaxer', 'Relaxer'], ['Tints', 'Tints'] ]  %>
+</p>
+
+<% end %>
+
+

@@ -9,7 +9,7 @@ class CreateClients < ActiveRecord::Migration
       t.string :zip
       t.string :cell_phone
       t.string :home_phone
-      t.string :email
+      t.string :client_email
       t.string :photo
 
       t.timestamps

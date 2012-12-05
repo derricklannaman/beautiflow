@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201220120) do
+ActiveRecord::Schema.define(:version => 20121204182334) do
 
   create_table "clients", :force => true do |t|
     t.string   "first_name"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(:version => 20121201220120) do
     t.string   "zip"
     t.string   "cell_phone"
     t.string   "home_phone"
+    t.string   "client_email"
     t.string   "photo"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.string   "client_email"
+    t.integer  "stylist_id"
   end
 
   add_index "clients", ["client_email"], :name => "index_clients_on_client_email", :unique => true
@@ -42,10 +43,10 @@ ActiveRecord::Schema.define(:version => 20121201220120) do
   create_table "stylists", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "stylist_email"
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.string   "stylist_email"
   end
 
   add_index "stylists", ["stylist_email"], :name => "index_stylists_on_stylist_email", :unique => true

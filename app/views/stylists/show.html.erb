@@ -13,9 +13,15 @@
 
 
 <div class="field">
-  <%= link_to "Manage Existing Clients", clients_path %>
+  <%#= link_to "Manage Clients", stylist_clients_path %>
 </div><br>
 
+<div class="field">
+  <%= link_to "Manage Clients", stylist_clients_path(@stylist) %>
+</div><br>
+<div class="field">
+  <%= link_to "Manage Services", stylist_services_path(@stylist) %>
+</div><br>
 <div>
   <%= link_to "Edit my Profile", edit_stylist_path %>
 </div>

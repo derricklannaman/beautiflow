@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Beautiflow</title>
+  <title>BeautiFlow</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div class="container">
+     <%= render "shared/nav" %> <!-- Find main nav bar in 'shared' dir -->
+
+
     <div class="row">
       <div class="span3">
-
       </div><!-- end "span3" -->
 
       <div class="span9">
-        <%= show_dynamic_links %>
-         <%= render 'flash' %> <!--flash message partial -->
+        <%= display_flash %>
 
-          <%= yield %>
+        <%= yield %>
 
       </div><!-- end "span9" -->
-
   </div><!-- end container -->
 
 </body>

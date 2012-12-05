@@ -2,20 +2,23 @@
 
 <div class="form">
   <%= form_for @client do |f| %>
-  <%= render :partial => 'shared/form_client', :locals => {:f => f} %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
 
   <div class="form_buttons">
-    <%= submit_tag "Add Client Now"%>
+    <%= f.submit "Add Client Now" %>
   </div>
   <% end %>
 </div><!-- end form -->
 
 <!-- Links back to manage clients and dashboard -->
   <div>
-    <%= link_to "Back Manage Client", clients_path %>
+    <%= link_to "Back Manage Client", stylist_clients_path %>
   </div>
   <div>
-    <%= link_to "Back to dashboard", stylist_path %>
+    <%#= link_to "Back Manage Client", clients_path %>
+  </div>
+  <div>
+    <%#= link_to "Back to dashboard", stylist_path %>
   </div>
 
 

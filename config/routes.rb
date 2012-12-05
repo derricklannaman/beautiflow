@@ -9,8 +9,12 @@ Beautiflow::Application.routes.draw do
     # match '/dashboard' => :dashboard
   end
 
+  resources :stylists do
+    resources :clients, :services
+  end
+
   # match '/dashboard' => 'stylists#show', :as => 'dashboard'
-  resources :stylists, :clients
+  # resources :stylists, :clients
 
   get   '/signin'  => 'sessions#new'
   post  '/signin'  => 'sessions#create'

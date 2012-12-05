@@ -11,10 +11,11 @@
 #  zip            :string(255)
 #  cell_phone     :string(255)
 #  home_phone     :string(255)
+#  client_email   :string(255)
 #  photo          :string(255)
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
-#  client_email   :string(255)
+#  stylist_id     :integer
 #
 
 class Client < ActiveRecord::Base

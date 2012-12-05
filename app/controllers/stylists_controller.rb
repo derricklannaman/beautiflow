@@ -1,5 +1,4 @@
 class StylistsController < ApplicationController
-  #before_filter :authenticate_user
   def index
     @stylists = Stylist.all
   end
@@ -10,10 +9,10 @@ class StylistsController < ApplicationController
 
   def create
     @stylist = Stylist.new(params[:stylist])
-
     if @stylist.save
       flash[:notice] = "Welcome #{@stylist.first_name}, you have successfully created your account."
-      redirect_to stylist_path(@stylist)
+      # sign_in @stylist
+        redirect_to stylist_path(@stylist)
     else
       flash[:notice] = "Oops! Something went wrong. Please try again."
       render :new
@@ -31,13 +30,12 @@ class StylistsController < ApplicationController
   def update
     @stylist = Stylist.find(params[:id])
     @stylist.update_attributes(params[:stylist])
-
-    redirect_to stylist_path(@stylist)
+      redirect_to stylist_path(@stylist)
   end
 
   def destroy
     Stylist.find(params[:id]).destroy
     flash[:notice] = "Account deleted!"
-    redirect_to root_path
+      redirect_to root_path
   end
 end

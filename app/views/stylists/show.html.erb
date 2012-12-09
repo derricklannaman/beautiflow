@@ -1,9 +1,9 @@
 <div class="main-dashboard">
   <div class="outer-plate">
-    <div class="stylist-profile-box">
-    <h1><%= "#{@authenticated_user.try(:first_name).capitalize}'s "%>Dashboard View</h1>
-      <p>Member since: <%= member_since %></p>
-      <p>Email: <%= @stylist.stylist_email %></p>
+    <div class="stylist-info-box">
+      <h1><%= "#{@authenticated_user.try(:first_name).capitalize}'s "%>Dashboard View</h1>
+        <p>Member since: <%= member_since %></p>
+        <p>Email: <%= @stylist.stylist_email %></p>
     </div>
 
   <ul id="control-panel">

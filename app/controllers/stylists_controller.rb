@@ -24,6 +24,8 @@ class StylistsController < ApplicationController
 
   def show
     @stylist = Stylist.find(params[:id])
+
+    Notifications.welcome_email(@stylist).deliver
   end
 
   def edit

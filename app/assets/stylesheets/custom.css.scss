@@ -1,8 +1,9 @@
 /*General styles*/
 
 body {
-/*  background: -webkit-radial-gradient(circle, #FFF,#FF9200);
-  background: #FF9200;*/
+  /*background: -webkit-radial-gradient(circle, #FFF,#9051B2);*/
+  background: -webkit-gradient(radial, center center, 6, center center, 1200, from(#FFF), to(#9051b2));
+  /*background: #FF9200; #9051b2*/
 }
 
 .container {
@@ -36,27 +37,42 @@ li {
   color:  #FFF;
   text-shadow:  none;
   font-size:  26px;
-  margin-left: 30px;
+  margin-left: 20px;
+  padding-top: 20px;
 }
 
+
 .navbar-inner {
-  background: #48036F;
-  min-height: 66px;
+  background: #2B0042;
+  min-height: 100px;
   margin-top: -20px;
   padding-top: 24px;
   border: none;
   border-bottom:  1px solid #EEE;
   box-shadow: 0px 2px 17px #333;
-
-/*-webkit-radial-gradient(circle, #FFF,#48036F);*/
   }
 
+.navbar .nav li a {
+  color:  #832EB2;
+  font-size: 16px;
+  text-shadow:  none;
+  margin-top: 32px;
+   &:hover {
+    color: #FFBA23;
+    }
+}
 
 
-.stylist-profile-box {
-  padding-left: 176px;
-  margin-right: 155px;
+
+.stylist-info-box {
+  border: 2px solid #985700;
+  padding-right: 75px;
+  padding-left: 112px;
+  margin: 20px 77px 20px 48px;
+  border-radius: 12px;
   text-shadow: 2px 1px 3px #000;
+  /*background: url('px_by_Gre3g.png');*/
+  /*opacity:  0.7;*/
   p{
     font-size: 18px;
   }
@@ -69,9 +85,10 @@ li {
   color:  #FFF;
   top:  27px;
   left: -43px;
-  margin-top: -10px;
-  margin-left: 56px;
+  margin-top: 10px;
+  margin-left: 30px;
   padding-top:  10px;
+  padding-left: 50px;
   text-shadow:  1px 1px 1px #333;
   box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid #888;
@@ -113,6 +130,12 @@ li {
 }
 
 /*Typography*/
+
+h1 {
+  /*color: #2B0042;*/
+}
+
+
 
 #main-greeting {
   margin-top: 60px;

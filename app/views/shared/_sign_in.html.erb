@@ -1,0 +1,19 @@
+<div id="sign-in-dropdown">
+  <div id="sign-in-panel">
+    <%= form_tag '/signin' do %>
+      <div class="field">
+        <h3>Sign In <span>with your email and password</span></h3>
+          Email
+          <%= email_field_tag 'stylist_email' %>
+
+          Password
+          <%= password_field_tag 'password', placeholder="" %>
+          <%= button_tag "X", :id => "close-btn", :class => "btn-warning" %>
+      </div>
+
+      <div class="field">
+        <%= submit_tag 'Sign In', id: "btn-danger" %>
+      </div>
+    <% end %>
+  </div>
+</div>

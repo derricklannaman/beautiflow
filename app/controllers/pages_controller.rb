@@ -11,6 +11,6 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def dashboard
+  def news
   end
 end

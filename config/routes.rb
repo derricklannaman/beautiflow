@@ -2,23 +2,23 @@ Beautiflow::Application.routes.draw do
 
   root :to => 'pages#index'
 
-  scope :controller    => :pages do
-    match '/pricing'   => :pricing
-    match '/about'     => :about
-    match '/contact'   => :contact
-    # match '/dashboard' => :dashboard
-  end
-
   resources :stylists do
     resources :clients, :services
   end
 
-  # match '/dashboard' => 'stylists#show', :as => 'dashboard'
-  # resources :stylists, :clients
-
-  get   '/signin'  => 'sessions#new'
+  # get   '/signin'  => 'sessions#new'
   post  '/signin'  => 'sessions#create'
   get   '/signout' => 'sessions#destroy'
+
+  get '/message' => 'twilio#new'
+  post '/message' => 'twilio#message'
+
+  scope :controller    => :pages do
+    match '/pricing'   => :pricing
+    match '/about'     => :about
+    match '/contact'   => :contact
+    match '/news'      => :news
+  end
 
 
 

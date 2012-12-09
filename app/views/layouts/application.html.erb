@@ -7,20 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+     <%= render "shared/sign_in" %>
+     <%= render "shared/nav" %>
   <div class="container">
-     <%= render "shared/nav" %> <!-- Find main nav bar in 'shared' dir -->
 
 
-    <div class="row">
-      <div class="span3">
-      </div><!-- end "span3" -->
 
-      <div class="span9">
-        <%= display_flash %>
+     <%= yield :submenu %>
 
-        <%= yield %>
+     <%= display_flash %>
 
-      </div><!-- end "span9" -->
+        <div>
+          <%= yield %>
+        </div>
+
+
+     <%= render "shared/footer" %>
+
   </div><!-- end container -->
 
 </body>

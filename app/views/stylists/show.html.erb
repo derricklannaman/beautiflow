@@ -1,34 +1,38 @@
-<h1><%= @authenticated_user.try(:first_name) %> Dashboard View</h1>
+<div class="main-dashboard">
+  <div class="outer-plate">
+    <div class="stylist-profile-box">
+    <h1><%= "#{@authenticated_user.try(:first_name).capitalize}'s "%>Dashboard View</h1>
+      <p>Member since: <%= member_since %></p>
+      <p>Email: <%= @stylist.stylist_email %></p>
+    </div>
 
-<div>
-  <h3><%= @stylist.first_name %> <%= @stylist.last_name %></h3>
-    Member since:
-    <%= member_since  %>
-</div><br>
-<div>
-  email:
-  <%= @stylist.stylist_email %>
-</div>
+  <ul id="control-panel">
+    <li>
+      <div class="control-btn" id="manage-client">
+        <div class="control-plate" id="control-plate-client">
+          <%= link_to "Manage Clients", stylist_clients_path(@stylist), :class => 'manage-btn', :id => 'client-btn-text' %>
+        </div>
+      </div>
+    </li>
 
+    <li>
+      <div class="control-btn" id="manage-service">
+        <div class="control-plate" id="control-plate-service">
+          <%= link_to "Manage Services", stylist_services_path(@stylist), :class=> 'manage-btn', :id => 'service-btn-text' %>
+        </div>
+      </div>
+    </li>
 
+    <li>
+      <div class="control-btn" id="manage-profile">
+        <div class="control-plate" id="control-plate-profile">
+      <%= link_to "Edit my Profile", edit_stylist_path, :class => 'manage-btn', :id => 'profile-btn-text' %>
+        </div>
+      </div>
+    </li>
+  </ul>
 
-<div class="field">
-  <%#= link_to "Manage Clients", stylist_clients_path %>
-</div><br>
-
-<div class="field">
-  <%= link_to "Manage Clients", stylist_clients_path(@stylist) %>
-</div><br>
-<div class="field">
-  <%= link_to "Manage Services", stylist_services_path(@stylist) %>
-</div><br>
-<div>
-  <%= link_to "Edit my Profile", edit_stylist_path %>
-</div>
-<div>
-  <%= link_to "Go back", new_stylist_path %>
-</div>
-
-<div>
-  <%= link_to "Delete my Account", stylist_path(@stylist), :method => :delete, :confirm => "Are you sure?"  %>
+  <div>
+    <%= link_to "Delete my Account", stylist_path(@stylist), :method => :delete, :confirm => "Are you sure?", :class => 'btn btn-danger' %>
+  </div>
 </div>

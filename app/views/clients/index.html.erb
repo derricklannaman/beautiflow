@@ -1,11 +1,11 @@
 <div class="client-list">
-  <h2>Clients List</h2>
+  <h2><%= @stylist.first_name.capitalize %>'s Client List</h2>
 
- <!--  <div class="field"> -->
-    <%= link_to "Add Clients", new_stylist_client_path %>
-  <!-- </div><br> -->
+    <div>
+      <%= link_to "Add New Client", new_stylist_client_path, class: "btn btn-success" %>
+    </div>
 
-  <table class="listing-clients" summary="Client List">
+  <table id="listing-clients" summary="Client List">
     <tr class="header">
       <th>First Name | </th>
       <th>Last Name | </th>
@@ -30,14 +30,15 @@
       <td><%= client.home_phone %></td>
       <td><%= client.client_email %></td>
         <td class="controls">
-          <%= link_to "View", stylist_client_path(client), class: 'action-view'  %>
-          <%= link_to "Edit", edit_stylist_client_path(stylist, client), class: 'action-edit' %>
-          <%= link_to "Delete", stylist_client_path(stylist, client), class: 'action-delete', :method => :delete, :confirm => "Are you sure?" %>
+          <%= link_to "View", stylist_client_path(@stylist, client), class: "btn btn-success"  %>
+          <%= link_to "Edit", edit_stylist_client_path(@stylist, client), class: "btn btn-primary" %>
+          <%= link_to "Delete", stylist_client_path(@stylist, client), class: "btn btn-danger", :method => :delete, :confirm => "Are you sure?" %>
         </td>
     </tr>
   <% end %>
   </table>
   </div>
 </div><!-- end client-list -->
+
 
 

@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       # sign_in stylist
       redirect_to stylist_path(stylist)
     else
-      #flash[:notice] = "Oops. Please check your signin or password and try again."
+      flash[:notice] = "Oops. Please check your signin or password and try again."
       render :new
     end
   end

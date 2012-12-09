@@ -1,0 +1,245 @@
+/*General styles*/
+
+body {
+/*  background: -webkit-radial-gradient(circle, #FFF,#FF9200);
+  background: #FF9200;*/
+}
+
+.container {
+  margin: 0 auto;
+  width:  960px;
+  min-height: 600px;
+
+}
+
+a {
+
+  text-decoration: none;
+}
+
+li {
+  text-decoration:  none;
+  list-style: none;
+}
+
+.main-dashboard {
+  margin-left:  44px;
+}
+/*Navigation/Headings */
+.navbar {
+  min-height: 50px;
+  position: relative;
+  top:  0px;
+  left: 0px;
+}
+.navbar .brand {
+  color:  #FFF;
+  text-shadow:  none;
+  font-size:  26px;
+  margin-left: 30px;
+}
+
+.navbar-inner {
+  background: #48036F;
+  min-height: 66px;
+  margin-top: -20px;
+  padding-top: 24px;
+  border: none;
+  border-bottom:  1px solid #EEE;
+  box-shadow: 0px 2px 17px #333;
+
+/*-webkit-radial-gradient(circle, #FFF,#48036F);*/
+  }
+
+
+
+.stylist-profile-box {
+  padding-left: 176px;
+  margin-right: 155px;
+  text-shadow: 2px 1px 3px #000;
+  p{
+    font-size: 18px;
+  }
+}
+
+.outer-plate {
+  background: #FFBA23;
+  border-radius: 12px;
+  text-align: center;
+  color:  #FFF;
+  top:  27px;
+  left: -43px;
+  margin-top: -10px;
+  margin-left: 56px;
+  padding-top:  10px;
+  text-shadow:  1px 1px 1px #333;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #888;
+  border-right: 1px solid #999;
+  border-left: 1px solid #EEE;
+  border-top: 1px solid #EEE;
+  list-style-type: none;
+  display: inline-block;
+}
+
+/*button styling*/
+
+#register-form-btn {
+  width: 200px;
+  margin-left:  380px;
+  padding:  10px 70px;
+  font-size: 28px;
+  color:  #FFF;
+  text-shadow: 1px 1px 1px #000;
+  text-decoration: none;
+  box-shadow: 1px 1px 4px #333;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#569700), to(#84E900));
+  opacity:  0.85;
+}
+#register-form-btn:hover {
+  opacity:  1;
+}
+
+
+#member-btn {
+  margin: 7px 10px 7px 800px;
+  border-radius: 6px;
+  padding: 3px 10px;
+}
+.btn.btn-danger {
+  margin-bottom: 7px;
+}
+
+/*Typography*/
+
+#main-greeting {
+  margin-top: 60px;
+  margin-left:  300px;
+  margin-bottom:  50px;
+}
+
+#sign-in-dropdown {
+  margin: 0 auto;
+  width:  1960px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+  background: url('px_by_Gre3g.png');
+  color:  #FFF;
+  letter-spacing: 2px;
+
+  /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#FFF));*/
+
+}
+
+
+#sign-in-panel {
+  margin-left:  100px;
+}
+
+.control-plate {
+  background: -webkit-gradient(linear, left top, right top, from(#FFEABD), to(#FFBA23));
+  background: -moz-linear-gradient(left, #FFF, #FFBA23);
+  width: 174px;
+  height: 153px;
+  border-radius: 3px;
+  /*text-align: center;*/
+  position: relative;
+  top:  27px;
+  left: -43px;
+  margin-top: -10px;
+  margin-left: 56px;
+  padding-top:  10px;
+  text-shadow:  1px 1px 1px #333;
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.9);
+  border-bottom: 0.5px solid #888;
+  border-right: 0.5px solid #999;
+  border-left: 0.5px solid #EEE;
+  border-top: 0.5px solid #EEE;
+  list-style-type: none;
+  /*display: inline-block;*/
+}
+
+.control-btn {
+  float:  left;
+  margin: 4px;
+  margin-left: 27px;
+  width: 200px;
+  height: 200px;
+  background-color: #FF9E00;
+  border-radius: 3px;
+  border: 1px solid #F3F3F3;
+  box-shadow: inset 2px 2px 20px #333;
+  /*display: block;*/
+}
+
+a.manage-btn {
+  font-size:  25px;
+  text-decoration: none;
+  color: #FF9E00;
+  text-shadow: 2px 1px 3px #000;
+/*  &:hover {
+    color:  #FFF;
+  }*/
+}
+
+/*client show page*/
+
+.client-detail {
+  float: left;
+  width:  400px;
+  padding:  20px;
+  border: 1px solid black;
+}
+/*This is the drop down box to send a text*/
+#text-client-box {
+  float:  left;
+  width: 300px;
+  margin-left: 40px;
+  background: -webkit-linear-gradient(top,#EEE,#FFF);
+  p {
+    margin-left: 8px;
+  }
+}
+
+#close-text-box {
+  margin-left: -27px;
+  margin-top: 0px;
+  border-radius: 4px;
+}
+
+/*aligns phone field on client show*/
+#phone {
+  margin-top: 10px;
+  margin-left: 16px;
+}
+/*This is the send message btn in text client field on client show*/
+input.btn.btn-success {
+margin-left: 163px;
+}
+
+/*This is the delete btn on client show page*/
+.btn.btn-danger {
+  margin-bottom: 8px;
+  margin-top: 9px;
+}
+/*This is the text client btn on client show page*/
+#create_text {
+  width: 300px;
+  margin-left: 40px;
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

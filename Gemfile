@@ -12,6 +12,7 @@ gem "rails-footnotes"
 gem "carrierwave"
 gem "fog"
 gem "bcrypt-ruby"
+gem "twilio-ruby"
 
 
 # Gems used only for assets and not required

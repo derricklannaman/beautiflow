@@ -1,11 +1,12 @@
 <h1>Services</h1>
 
+<%= form_tag do |f| %>
 
-<p>
-  <%= label :chemical_services  %><br>
-  <%= select :chemical_services,[ ['Relaxer', 'Relaxer'], ['Tints', 'Tints'] ]  %>
-</p>
+<div class='field'>
+  <%= f.label :chemical_services %><br>
+  <%= f.text_field   %>
+</div>
 
-<%# end %>
+<% end %>
 
 

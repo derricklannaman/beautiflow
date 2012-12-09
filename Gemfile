@@ -13,6 +13,7 @@ gem "carrierwave"
 gem "fog"
 gem "bcrypt-ruby"
 gem "twilio-ruby"
+gem 'aws-ses'
 
 
 # Gems used only for assets and not required

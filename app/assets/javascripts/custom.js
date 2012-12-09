@@ -10,9 +10,21 @@ $(function(){
   $('#control-plate-client').hover(text_light_on, text_light_off);
   $('#control-plate-service').hover(text_light_on1, text_light_off1);
   $('#control-plate-profile').hover(text_light_on2, text_light_off2);
-
+  $('#close-text-box').hide();
+  $('#create_text').click(show_close_button);
+  $('#close-text-box').click(hide_text_box);
 
 });
+
+function hide_text_box(){
+  $('#text-client-box').slideUp(500);
+  $('#close-text-box').fadeOut(700);
+}
+
+
+function show_close_button(){
+   $('#close-text-box').delay(200).fadeIn(800);
+}
 
 function text_light_on(){
   $('#client-btn-text').css('color', '#FFF');

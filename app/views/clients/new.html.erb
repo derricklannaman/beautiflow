@@ -1,18 +1,12 @@
 <h1>Add new Clients</h1>
 
 <div class="form">
-  <%= form_for([@stylist, @client]) do |f| %>
-</div>
-
-<%= render :partial => 'form', :locals => {:f => f} %>
+  <%= form_for([@authenticated_user, @client], :html => {:multipart => true}) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
 
 <% end %>
 </div><!-- end form -->
 
-<!-- Links back to manage clients and dashboard -->
-  <div>
-    <%#= link_to "Back Manage Client", stylist_clients_path(@stylist) %>
-  </div>
 
 
 

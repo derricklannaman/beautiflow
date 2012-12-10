@@ -13,8 +13,59 @@ $(function(){
   $('#close-text-box').hide();
   $('#create_text').click(show_close_button);
   $('#close-text-box').click(hide_text_box);
+  $('#client-delete').hide();
+  $('#confirm_deletion').click(delete_client);
+  $('#confirm_client_added').click(client_added);
+  $('a.btn.btn-danger').click(delete_client);
 
 });
+
+ // function delete_client(){
+ //   alertify.alert( "Are you sure you want to delete this client?", function(){
+ //    console.log('we clicked ok');
+ //  });
+ // }
+
+ function delete_client(){
+  alertify.confirm( "Are you sure you want to delete this client?", function () {
+  if (e) {
+    console.log('we clicked ok');
+
+    $.ajax({
+      type: "POST",
+      url: "/stylists/",
+      data: {}
+    }).done(function( msg ) {
+      console.log( msg );
+    });
+
+  }
+  else  {
+    console.log('we clicked cancel');
+  }
+
+ });
+
+}
+
+
+
+
+// function b2(){
+//   alertify.log("hey", "warning");
+
+// }
+ function client_added(){
+    // alert('yes');
+   alertify.success("positive notification");
+
+ }
+// function b4(){
+//   alertify.error("negative notication!");
+
+// }
+
+
 
 function hide_text_box(){
   $('#text-client-box').slideUp(500);

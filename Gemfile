@@ -11,6 +11,7 @@ gem "annotate"
 gem "rails-footnotes"
 gem "carrierwave"
 gem "fog"
+gem 'rmagick'
 gem "bcrypt-ruby"
 gem "twilio-ruby"
 gem 'aws-ses'

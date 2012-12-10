@@ -19,11 +19,11 @@
 #
 
 class Client < ActiveRecord::Base
-  attr_accessible :cell_phone, :city, :client_email, :first_name, :home_phone,
-                  :last_name, :photo, :state, :street_address, :zip
+  # attr_accessible :cell_phone, :city, :client_email, :first_name, :home_phone,
+  #                 :last_name, :photo, :remote_photo_url, :state, :street_address, :zip
 
   belongs_to :stylist
   has_many   :services, :through => :transactions
 
-
+  mount_uploader :photo, PictureUploader
 end

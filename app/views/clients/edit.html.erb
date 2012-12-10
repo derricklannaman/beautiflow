@@ -2,7 +2,7 @@
 <%= link_to "Back to All Clients", stylist_clients_path(@stylist) %>
  <%= link_to "Back to dashboard", stylist_path(@stylist) %>
 
-<%= form_for([@stylist, @client]) do |f| %>
+<%= form_for([@stylist, @client], :html => {:multipart => true}) do |f| %>
 <%= render :partial => 'form', :locals => {:f => f} %>
 
 <% end %>

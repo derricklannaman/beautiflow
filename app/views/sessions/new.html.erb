@@ -1,2 +1,19 @@
+<div id="">
+  <div id="sign-in-panel">
+    <%= form_tag '/signin' do %>
+      <div class="field">
+        <h3>Sign In <span>with your email and password</span></h3>
+          Email
+          <%= email_field_tag 'stylist_email' %>
 
+          Password
+          <%= password_field_tag 'password', placeholder="" %>
+      </div>
+
+      <div class="field">
+        <%= submit_tag 'Sign In', id: "btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+</div>
 

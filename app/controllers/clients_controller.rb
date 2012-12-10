@@ -1,26 +1,25 @@
 class ClientsController < ApplicationController
-  before_filter :get_stylist, :authenticate_user
-      # see stylist_helper.rb for get_stylist
 
   def index
-    @clients = @stylist.clients.all
+    @clients = @authenticated_user.clients.all
   end
 
   def new
-    @client = @stylist.clients.new
+    @client = @authenticated_user.clients.new
   end
 
   def create
-    @client = @stylist.clients.new(params[:client])
+    @client = @authenticated_user.clients.new(params[:client])
 
     if @client.save
-      redirect_to stylist_client_path(@stylist, @client)
+      redirect_to stylist_client_path(@authenticated_user, @client)
     else
       render :new
     end
   end
 
   def edit
+    @stylist = @authenticated_user
     @client = Client.find(params[:id])
   end
 
@@ -31,19 +30,14 @@ class ClientsController < ApplicationController
   end
 
   def show
+    @stylist = @authenticated_user
     @client = Client.find(params[:id])
   end
 
   def destroy
-    Client.find(params[:id]).destroy
-    flash[:notice] = "Client deleted"
+    @client = Client.find(params[:id])
+    #@client.destroy
     redirect_to stylist_clients_path
-  end
-
-  private
-
-  def get_stylist
-    @stylist = Stylist.find(params[:stylist_id])
   end
 
 end

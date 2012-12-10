@@ -8,7 +8,7 @@
 <% end %>
 
 <div class="form">
-<%= form_for @stylist do |f| %>
+<%= form_for @stylist, :html => {:multipart => true} do |f| %>
   <%= render :partial => 'form', :locals => {:f => f} %>
 
   <div class="form_buttons">

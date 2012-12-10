@@ -1,11 +1,9 @@
-<h1>Services</h1>
+<h1>Services Offered</h1>
 
-<%= form_tag do |f| %>
-
-<div class='field'>
-  <%= f.label :chemical_services %><br>
-  <%= f.text_field   %>
-</div>
+<%= form_tag do %>
+<div class="service-field" >
+ <p>Type of Service:</p>
+<%= select_tag(:services, options_for_select([['Chemical', 1], ['Color', 2], ['Cutting']])) %>
 
 <% end %>
 

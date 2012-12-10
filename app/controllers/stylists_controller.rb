@@ -1,7 +1,5 @@
 class StylistsController < ApplicationController
 
-  before_filter :authenticate_user, :only => [:show, :edit, :update, :delete]
-
   def index
     @stylists = Stylist.all
   end
@@ -25,7 +23,7 @@ class StylistsController < ApplicationController
   def show
     @stylist = Stylist.find(params[:id])
 
-    Notifications.welcome_email(@stylist).deliver
+    # Notifications.welcome_email(@stylist).deliver
   end
 
   def edit

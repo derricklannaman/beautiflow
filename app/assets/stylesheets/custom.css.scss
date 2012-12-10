@@ -41,6 +41,14 @@ li {
   padding-top: 20px;
 }
 
+.navbar .nav.pull-right {
+  float: right;
+  margin-right: 150px;
+}
+
+.navbar .nav > li {
+  float: right;
+}
 
 .navbar-inner {
   background: #2B0042;
@@ -65,14 +73,14 @@ li {
 
 
 .stylist-info-box {
-  border: 2px solid #985700;
+  border: 1px solid #F1ECEC;
   padding-right: 75px;
   padding-left: 112px;
   margin: 20px 77px 20px 48px;
   border-radius: 12px;
   text-shadow: 2px 1px 3px #000;
-  /*background: url('px_by_Gre3g.png');*/
-  /*opacity:  0.7;*/
+  background: #FF9200;
+  box-shadow: inset 0px 0px 8px #333;
   p{
     font-size: 18px;
   }
@@ -120,8 +128,9 @@ li {
 
 
 
+
 #member-btn {
-  margin: 7px 10px 7px 800px;
+  margin: -20px 10px -20px 800px;
   border-radius: 6px;
   padding: 3px 10px;
 }

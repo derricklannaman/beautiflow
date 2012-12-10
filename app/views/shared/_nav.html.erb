@@ -1,10 +1,20 @@
 <header class="navbar">
   <div class="navbar-inner">
-    <%= link_to "BeautiFlow", root_path, :class => "brand"  %>
+    <% if @authenticated_user %>
+      <%= link_to "BeautiFlow", stylist_path(@authenticated_user), :class => "brand"  %>
+     <% else %>
+      <%= link_to "BeautiFlow", root_path, :class => "brand"  %>
+    <% end %>
+
     <ul class="nav pull-right">
-      <li><%= link_to "About Us", about_path %></li>
-      <li><%= link_to "Pricing", pricing_path %></li>
-      <li><%= link_to "Contact Us", contact_path %></li>
+
+        <% if !@authenticated_user %>
+          <li><%= link_to "Pricing", pricing_path %></li>
+        <% end %>
+          <li><%= link_to "About Us", about_path %></li>
+          <li><%= link_to "Contact Us", contact_path %></li>
+          <li><%= signed_in %></li>
     </ul>
+
   </div>
 </header>

@@ -3,10 +3,11 @@ Beautiflow::Application.routes.draw do
   root :to => 'pages#index'
 
   resources :stylists do
-    resources :clients, :services
+    resources :clients
   end
+  resources :services
 
-  # get   '/signin'  => 'sessions#new'
+  get   '/signin'  => 'sessions#new'
   post  '/signin'  => 'sessions#create'
   get   '/signout' => 'sessions#destroy'
 

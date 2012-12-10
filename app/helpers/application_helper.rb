@@ -1,8 +1,8 @@
 module ApplicationHelper
 
-  def show_dynamic_links
+  def signed_in
     if @authenticated_user
-      link_to "#{@authenticated_user.first_name}, Sign Out Here", signout_path
+      link_to "Sign Out", signout_path
     else
       link_to "Sign In", signin_path
     end

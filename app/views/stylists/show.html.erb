@@ -1,7 +1,7 @@
 <div class="main-dashboard">
   <div class="outer-plate">
     <div class="stylist-info-box">
-      <h1><%= "#{@authenticated_user.try(:first_name).capitalize}'s "%>Dashboard View</h1>
+      <h1><%= "#{@authenticated_user.try(:first_name)}"%>Dashboard View</h1>
         <p>Member since: <%= member_since %></p>
         <p>Email: <%= @stylist.stylist_email %></p>
     </div>
@@ -18,7 +18,7 @@
     <li>
       <div class="control-btn" id="manage-service">
         <div class="control-plate" id="control-plate-service">
-          <%#= link_to "Manage Services", stylist_services_path(@authenticated_user), :class=> 'manage-btn', :id => 'service-btn-text' %>
+          <%= link_to "Manage Services", services_path(@authenticated_user), :class=> 'manage-btn', :id => 'service-btn-text' %>
         </div>
       </div>
     </li>
@@ -33,6 +33,6 @@
   </ul>
 
   <div>
-    <%= link_to "Delete my Account", stylist_path(@stylist), :method => :delete, :confirm => "Are you sure?", :class => 'btn btn-danger' %>
+    <%= link_to "Delete my Account", stylist_path(@stylist), :method => :delete, :confirm => "Are you sure?", :class => 'btn btn-danger', :id => 'stylist-deleted'%>
   </div>
 </div>

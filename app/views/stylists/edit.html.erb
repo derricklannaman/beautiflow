@@ -1,14 +1,14 @@
+<div class="form_buttons">
+  <%= link_to "Back to dashboard", stylist_path, class: 'btn btn-success' %>
+</div>
+
 <h1>Edit your Profile</h1>
 
 <%= form_for @stylist, :html => {:multipart => true} do |f| %>
 
-<%= render :partial => 'form', :locals => {:f => f} %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
 
-<div class="form_buttons">
-  <%= submit_tag "Update profile"%>
-</div>
+  <%= submit_tag "Update profile", class: 'btn btn-warning'%>
+
 <% end %>
 
-<div>
-  <%= link_to "Back to dashboard", stylist_path %>
-</div>

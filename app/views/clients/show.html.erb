@@ -2,12 +2,33 @@
 
   <h2>Client Details</h2>
 
-  <div class="client-photo">
-    Client Photo goes here:
-    <%= image_tag(@client.photo) %>
-  </div>
+<div class="form-detail">
 
-<div class="client-detail">
+  <div id="client-photo">
+  <%= image_tag(@client.photo) %><br>
+    Client Photo:
+  </div>
+<!-- ============================ -->
+<div id="text-client-form">
+<div>
+  <input type="button" id="create_text" value="Text Client", class="btn btn-success" />
+  <input type="button" id="close-text-box" value="X", class="btn-success" />
+</div>
+
+<div id="text-client-box">
+  <%= form_tag '/message' do %>
+    <p><%= "Make a text to #{@client.first_name}" %>
+      <%= hidden_field_tag 'phone', @client.cell_phone %>
+    </p>
+    <p>Message:
+      <%= text_area_tag 'message' %>
+    </p>
+      <%= submit_tag 'Send Message', class: "btn btn-success" %>
+  <% end %>
+</div>
+
+<!-- ============================ -->
+
   <table class="">
     <tr>
       <th>Full Name</th>
@@ -32,29 +53,18 @@
 
     </table>
   <div>
-    <%= link_to "Edit", edit_stylist_client_path(@stylist, @client), class: 'btn btn-primary' %>
-    <%= link_to "Delete", stylist_client_path(@stylist, @client), class: 'btn btn-danger confirm_deletion', :method => :delete, :confirm => "Are you sure you want to delete #{@client.first_name}?" %>
+    <%= link_to "Edit", edit_stylist_client_path(@authenticated_user, @client), class: 'btn btn-primary' %>
+
+    <%= button_tag "Delete?", id: 'confirm_deletion', :class => "btn btn-danger" %>
+
   </div>
 </div><!-- client-detail -->
 <div class="clear"></div>
 
 <!-- This is the stylist texting to client form  -->
-<div>
-  <input type="button" id="create_text" value="Text Client", class="btn btn-success" />
-  <input type="button" id="close-text-box" value="X", class="btn-success" />
 
-</div>
-<div id="text-client-box">
-<%= form_tag '/message' do %>
-  <p><%= "Make a text to #{@client.first_name}" %>
-    <%= hidden_field_tag 'phone', @client.cell_phone %>
-  </p>
-  <p>Message:
-    <%= text_area_tag 'message' %>
-  </p>
-    <%= submit_tag 'Send Message', class: "btn btn-success" %>
-<% end %>
-</div>
+</div><!-- end text-client-form -->
+
 
 
 

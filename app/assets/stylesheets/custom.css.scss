@@ -1,10 +1,22 @@
 /*General styles*/
 
+
 body {
   /*background: -webkit-radial-gradient(circle, #FFF,#9051B2);*/
-  background: -webkit-gradient(radial, center center, 6, center center, 1200, from(#FFF), to(#9051b2));
+  background: -webkit-gradient(radial, center center, 6, center center, 1200, from(#FFF), to(#FF9200));
   /*background: #FF9200; #9051b2*/
 }
+#main_photo {
+/*  width:  960px;
+  height: 475px;
+*/  margin-top: -101px;
+/*  background: url('http://woman.thenest.com/DM-Resize/photos.demandstudios.com/getty/article/165/7/57279521.jpg?w=600&h=600&keep_ratio=1') center center no-repeat;
+  background-size: cover;
+  box-shadow: inset 55px 34px 67px #D1B7DF;
+  -webkit-filter: blur(3px);
+*/}
+
+
 
 .container {
   margin: 0 auto;
@@ -23,6 +35,10 @@ li {
   list-style: none;
 }
 
+input {
+  width:  200px;
+  min-height: 30px;
+}
 .main-dashboard {
   margin-left:  44px;
 }
@@ -87,7 +103,9 @@ li {
 }
 
 .outer-plate {
-  background: #FFBA23;
+  /*background: #FFF;*/
+  background:url('batthern.png');
+  width:  850px;
   border-radius: 12px;
   text-align: center;
   color:  #FFF;
@@ -105,13 +123,19 @@ li {
   border-top: 1px solid #EEE;
   list-style-type: none;
   display: inline-block;
+    border: 10px solid rgb(131, 46, 178);
+    border-radius: 20px;
+}
+
+#stylist-deleted {
+  margin-left: -25px;
 }
 
 /*button styling*/
 
 #register-form-btn {
   width: 200px;
-  margin-left:  380px;
+  margin-left:  339px;
   padding:  10px 70px;
   font-size: 28px;
   color:  #FFF;
@@ -126,8 +150,30 @@ li {
     }
 }
 
+#client_info_panel {
+  float:  left;
+  width:  300px;
+}
 
-
+#client_photo_panel {
+  position: relative;
+  top:  -170px;
+  left: 560px;
+  width:  200px;
+  height: 200px;
+  border: 3px solid #777;
+  border-radius: 20px;
+}
+/*
+#stylist_photo_panel {
+  position: relative;
+  top:  42px;
+  left: 390px;
+  width:  200px;
+  height: 200px;
+  border: 3px solid #777;
+  border-radius: 20px;
+}*/
 
 #member-btn {
   margin: -20px 10px -20px 800px;
@@ -140,16 +186,21 @@ li {
 
 /*Typography*/
 
-h1 {
-  /*color: #2B0042;*/
+#main-greeting {
+  font-size: 86px;
+  text-align: center;
+  line-height: 70px;
+  margin-top: 60px;
+  margin-left:  -22px;
+  margin-bottom:  36px;
+  padding-top: 90px;
+  color:  #FFF;
+  -webkit-text-stroke: 1px rgba(131,46, 178, .3);
+  text-shadow:  0px 0px 30px #2B0042;
 }
 
-
-
-#main-greeting {
-  margin-top: 60px;
-  margin-left:  300px;
-  margin-bottom:  50px;
+#main-greeting span {
+  font-size: 50px;
 }
 
 #sign-in-dropdown {
@@ -157,11 +208,11 @@ h1 {
   width:  1960px;
   margin-top: -10px;
   padding-bottom: 10px;
-  background: url('px_by_Gre3g.png');
-  color:  #FFF;
+  background: url('batthern.png');
+  color:  #2B0042;
   letter-spacing: 2px;
 
-  /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#FFF));*/
+  /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(248, 152, 16)), to(#FFF));*/
 
 }
 
@@ -176,11 +227,10 @@ h1 {
   width: 174px;
   height: 153px;
   border-radius: 3px;
-  /*text-align: center;*/
   position: relative;
   top:  27px;
   left: -43px;
-  margin-top: -10px;
+  margin-top: -7px;
   margin-left: 56px;
   padding-top:  10px;
   text-shadow:  1px 1px 1px #333;
@@ -190,7 +240,6 @@ h1 {
   border-left: 0.5px solid #EEE;
   border-top: 0.5px solid #EEE;
   list-style-type: none;
-  /*display: inline-block;*/
 }
 
 .control-btn {
@@ -215,17 +264,38 @@ a.manage-btn {
 
 /*client show page*/
 
-.client-detail {
+.form-detail {
   float: left;
-  width:  400px;
+  width:  800px;
+  background: #FFF;
   padding:  20px;
-  border: 1px solid black;
+  border: 10px solid #777;
+  border-radius: 20px;
 }
+
+.form-add-detail {
+  /*float: left;*/
+  width:  900px;
+  background: #FFF;
+  padding:  20px;
+  border: 10px solid #777;
+  border-radius: 20px;
+}
+
+#stylist-input-panel {
+  /*float:  left;*/
+  width:  300px;
+  margin-top: 0px;
+}
+
 /*This is the drop down box to send a text*/
 #text-client-box {
-  float:  left;
   width: 300px;
-  margin-left: 40px;
+  position: relative;
+  top:  -312px;
+  left: 300px;
+  margin-left: 70px;
+  margin-bottom: 20px;
   background: -webkit-linear-gradient(top,#EEE,#FFF);
   p {
     margin-left: 8px;
@@ -234,7 +304,7 @@ a.manage-btn {
 
 #close-text-box {
   margin-left: -27px;
-  margin-top: 10px;
+  margin-top: -633px;
   border-radius: 4px;
 }
 
@@ -245,7 +315,7 @@ a.manage-btn {
 }
 /*This is the send message btn in text client field on client show*/
 input.btn.btn-success {
-margin-left: 163px;
+margin-left: 2px;
 }
 
 /*This is the delete btn on client show page*/
@@ -256,8 +326,8 @@ margin-left: 163px;
 /*This is the text client btn on client show page*/
 #create_text {
   width: 300px;
-  margin-left: 40px;
-  margin-top: 10px;
+  margin-left: 370px;
+  margin-top: -634px;
   font-size: 19px;
   letter-spacing: 3px;
 }

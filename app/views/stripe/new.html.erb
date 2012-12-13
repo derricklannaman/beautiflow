@@ -1,0 +1,18 @@
+<h1>Pricing</h1>
+
+<div id="transaction">
+
+  <% if @authenticated_user %>
+    <script src="https://button.stripe.com/v1/button.js" class="stripe-button"
+          data-key="<%= STRIPE_PUB %>"></script>
+  <% else %>
+    <%= link_to 'Sign Up', new_stylist_path, class: 'btn btn-success'  %>
+  <% end %>
+
+  <%= form_tag '/stripe', :id => 'stripeform', :remote => true do %>
+
+  <% end %>
+</div>
+
+
+

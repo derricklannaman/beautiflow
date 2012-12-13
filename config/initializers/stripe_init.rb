@@ -1,0 +1,2 @@
+Stripe.api_key = ENV['STRIPE_SEC']
+STRIPE_PUB = ENV['STRIPE_PUB']

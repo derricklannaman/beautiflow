@@ -15,8 +15,8 @@ $(function(){
   $('#close-text-box').click(hide_text_box);
   $('#client-delete').hide();
   $('#confirm_deletion').click(delete_client);
-  $('#confirm_client_added').click(client_added);
-  $('a.btn.btn-danger').click(delete_client);
+  // $('#confirm_client_added').click(client_added);
+  $('button.btn.btn-danger').click(delete_client);
 
 });
 
@@ -27,16 +27,22 @@ $(function(){
  // }
 
  function delete_client(){
-  alertify.confirm( "Are you sure you want to delete this client?", function () {
+
+  var stylist_path = $(this).siblings().first();
+  stylist_path = $(stylist_path).attr('href');
+
+  var row = $(this).closest('tr').get(0);
+
+  alertify.confirm( "Are you sure you want to delete this client?", function (e) {
   if (e) {
-    console.log('we clicked ok');
 
     $.ajax({
-      type: "POST",
-      url: "/stylists/",
-      data: {}
+      type: "DELETE",
+      url: stylist_path,
+      dataType: 'json'
     }).done(function( msg ) {
-      console.log( msg );
+        console.log('it should delete');
+       $(row).hide();
     });
 
   }
@@ -55,11 +61,11 @@ $(function(){
 //   alertify.log("hey", "warning");
 
 // }
- function client_added(){
-    // alert('yes');
-   alertify.success("positive notification");
+ // function client_added(){
+ //    // alert('yes');
+ //   alertify.success("positive notification");
 
- }
+ // }
 // function b4(){
 //   alertify.error("negative notication!");
 

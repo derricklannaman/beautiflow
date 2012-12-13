@@ -12,7 +12,7 @@ class StylistsController < ApplicationController
     @stylist = Stylist.new(params[:stylist])
     if @stylist.save
       flash[:notice] = "Welcome #{@stylist.first_name}, you have successfully created your account."
-      # sign_in @stylist
+      session[:user_id] = @stylist.id
         redirect_to stylist_path(@stylist)
     else
       flash[:notice] = "Oops! Something went wrong. Please try again."

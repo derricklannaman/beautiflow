@@ -1,4 +1,5 @@
-<div class="form">
+<div class="form-add-detail">
+ <div id="client_info_panel">
    <div class='field'>
     <%= f.label :first_name, "First Name" %>
     <%= f.text_field :first_name %>
@@ -15,7 +16,11 @@
     <%= f.label :zip, "Zip" %>
     <%= f.text_field :zip %>
   </div>
+ </div>
 
+ <!-- ======================================== -->
+
+ <div id="client_contact_panel">
   <div class='field'>
     <%= f.label :cell_phone, "Cell Phone" %>
     <%= f.text_field :cell_phone %>
@@ -28,7 +33,10 @@
     <%= f.label :client_email, "Email" %>
     <%= f.text_field :client_email %>
   </div>
-
+ </div>
+ <!-- <div class="clear"></div> -->
+ <!-- ======================================== -->
+ <div id="client_photo_panel">
   <div class='field'>
     <%= f.label :photo %>
     <%= f.file_field :photo %>
@@ -42,9 +50,8 @@
     <%= image_tag(@client.photo_url) if @client.photo? %>
   </div>
 
+  <div class="form_buttons"></div>
 
-  <div class="form_buttons">
-
-    <%= f.submit  %>
+    <%= f.submit class: 'btn btn-success' %>
   </div>
 </div>

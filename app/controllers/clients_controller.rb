@@ -36,8 +36,14 @@ class ClientsController < ApplicationController
 
   def destroy
     @client = Client.find(params[:id])
-    #@client.destroy
-    redirect_to stylist_clients_path
+    @client.destroy
+
+    flash[:notice] = "Client deleted"
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.json { render json: params}
+    end
   end
 
 end

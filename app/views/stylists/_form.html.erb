@@ -1,5 +1,28 @@
-<div class="form">
+<div class="form-add-detail">
 
+<!-- <div id="stylist_photo_panel"> -->
+<!--   <div class='field'>
+    <%#= f.label :add_profile_photo %>
+    <%#= f.file_field :photo %>
+    <%#= f.hidden_field :photo_cache %>
+  </div>
+
+  <div class='field'>
+    <%#= f.text_field :remote_photo_url %>
+  </div>
+  <div class='field'>
+    <%#= image_tag(@stylist.photo_url) if @stylist.photo? %>
+  </div>
+
+  <div class="form_buttons"></div>
+   <%#= f.submit class: 'btn btn-success' %>
+  </div> -->
+
+
+
+<!-- ================================= -->
+
+<div id="stylist-input-panel">
   <div class="field">
     <%= f.label :first_name, "First name:" %>
     <%= f.text_field :first_name %>
@@ -25,4 +48,6 @@
     <%= f.password_field :password_confirmation %>
   </div>
 </div>
+<div class="clear"></div>
+
 

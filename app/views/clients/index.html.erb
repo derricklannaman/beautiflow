@@ -32,7 +32,7 @@
         <td class="controls">
           <%= link_to "View", stylist_client_path(@authenticated_user, client), class: "btn btn-success"  %>
           <%= link_to "Edit", edit_stylist_client_path(@authenticated_user, client), class: "btn btn-primary" %>
-          <%= link_to "Delete?", stylist_client_path(@authenticated_user, client), :class => "btn btn-danger" %>
+          <%= button_tag "Delete?", id: client.id, :class => "btn btn-danger" %>
         </td>
     </tr>
   <% end %>

@@ -1,6 +1,8 @@
-<h1>Edit client</h1>
-<%= link_to "Back to All Clients", stylist_clients_path(@stylist) %>
- <%= link_to "Back to dashboard", stylist_path(@stylist) %>
+
+<%= link_to "Back to All Clients", stylist_clients_path(@stylist), class: 'btn btn-success' %>
+<%= link_to "Back to dashboard", stylist_path(@stylist), class: 'btn btn-warning' %>
+
+<h1>Edit your client</h1>
 
 <%= form_for([@stylist, @client], :html => {:multipart => true}) do |f| %>
 <%= render :partial => 'form', :locals => {:f => f} %>

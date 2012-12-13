@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121210201134) do
+ActiveRecord::Schema.define(:version => 20121213195102) do
 
   create_table "clients", :force => true do |t|
     t.string   "first_name"
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(:version => 20121210201134) do
   end
 
   add_index "clients", ["client_email"], :name => "index_clients_on_client_email", :unique => true
+
+  create_table "profiles", :force => true do |t|
+    t.string   "name"
+    t.string   "nickname"
+    t.string   "salon_name"
+    t.string   "salon_address"
+    t.text     "bio"
+    t.text     "schedule"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "service_types", :force => true do |t|
     t.string   "service_name"
@@ -54,9 +65,13 @@ ActiveRecord::Schema.define(:version => 20121210201134) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "user_name"
+    t.string   "slug"
   end
 
+  add_index "stylists", ["slug"], :name => "index_stylists_on_slug", :unique => true
   add_index "stylists", ["stylist_email"], :name => "index_stylists_on_stylist_email", :unique => true
+  add_index "stylists", ["user_name"], :name => "index_stylists_on_user_name", :unique => true
 
   create_table "transactions", :force => true do |t|
     t.integer  "client_id"

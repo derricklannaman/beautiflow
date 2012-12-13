@@ -12,12 +12,16 @@ gem 'rmagick'
 gem "twilio-ruby"
 gem 'aws-ses'
 gem 'stripe'
+gem 'friendly_id'
 
 group :development do
   gem "pry-rails"
   gem "rails-footnotes"
   gem "annotate"
   gem "bcrypt-ruby"
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Gems used only for assets and not required

@@ -41,4 +41,14 @@ class StylistsController < ApplicationController
     flash[:notice] = "Account deleted!"
       redirect_to root_path
   end
+
+  def profile
+     @stylist = @authenticated_user
+  end
+
+
 end
+
+
+
+

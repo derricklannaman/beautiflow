@@ -7,6 +7,7 @@ class AddStylistsTable < ActiveRecord::Migration
       t.string :password_digest
 
       t.timestamps
+
     end
   end
 end

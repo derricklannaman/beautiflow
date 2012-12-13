@@ -3,7 +3,7 @@
 
 body {
   /*background: -webkit-radial-gradient(circle, #FFF,#9051B2);*/
-  background: -webkit-gradient(radial, center center, 6, center center, 1200, from(#FFF), to(#FF9200));
+  background: -webkit-gradient(radial, center center, 6, center center, 1200, from(#FFF), to(#9051b2));
   /*background: #FF9200; #9051b2*/
 }
 #main_photo {
@@ -95,7 +95,8 @@ input {
   margin: 20px 77px 20px 48px;
   border-radius: 12px;
   text-shadow: 2px 1px 3px #000;
-  background: #FF9200;
+  /*background: #FF9200;*/
+  background: -webkit-radial-gradient(circle, #FFF,#9051B2);
   box-shadow: inset 0px 0px 8px #333;
   p{
     font-size: 18px;
@@ -103,8 +104,8 @@ input {
 }
 
 .outer-plate {
-  /*background: #FFF;*/
-  background:url('batthern.png');
+  background: #FFF;
+  /*background:url('brushed_alu.png');*/
   width:  850px;
   border-radius: 12px;
   text-align: center;
@@ -123,7 +124,8 @@ input {
   border-top: 1px solid #EEE;
   list-style-type: none;
   display: inline-block;
-    border: 10px solid rgb(131, 46, 178);
+    /*border: 10px solid rgb(131, 46, 178);*/
+    border: 10px solid #EAABF2;
     border-radius: 20px;
 }
 
@@ -161,9 +163,13 @@ input {
   left: 560px;
   width:  200px;
   height: 200px;
-  border: 3px solid #777;
-  border-radius: 20px;
+
 }
+.client_img_field {
+
+}
+
+
 /*
 #stylist_photo_panel {
   position: relative;
@@ -218,6 +224,10 @@ input {
 
 
 #sign-in-panel {
+  background: #FFF;
+  padding:  20px;
+  border: 10px solid #777;
+  border-radius: 20px;
   margin-left:  100px;
 }
 

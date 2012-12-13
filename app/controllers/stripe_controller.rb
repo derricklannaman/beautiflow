@@ -11,7 +11,7 @@ class StripeController < ApplicationController
     @stripe = Stripe::Charge.create(
       :amount       => amount,
       :card         => token,
-      :description  => 'Rails Stripe customer'
+      :description  => 'Rails Stripe customer',
       :currency     => 'usd'
         )
     rescue => e

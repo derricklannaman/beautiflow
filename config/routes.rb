@@ -9,6 +9,10 @@ Beautiflow::Application.routes.draw do
 
   resources :services
 
+  # routes for stylist profile page
+
+  get '/profiles/' => 'stylists#profile'
+
  # routes for sessions controller
 
   get   '/signin'  => 'sessions#new'

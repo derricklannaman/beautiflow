@@ -5,20 +5,25 @@
 #  id              :integer          not null, primary key
 #  first_name      :string(255)
 #  last_name       :string(255)
+#  stylist_email   :string(255)
 #  password_digest :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  stylist_email   :string(255)
+#  user_name       :string(255)
 #
 
 class Stylist < ActiveRecord::Base
 
   has_secure_password
 
+  extend FriendlyId
+  friendly_id :user_name, :use => :slugged
+
   has_many :clients
   has_many :services
 
-  mount_uploader :photo, PictureUploader
+
+  # mount_uploader :photo, PictureUploader
 
   # validates :first_name, presence: true, length: { maximum: 50 }
   # validates :last_name, presence: true, length: { maximum: 50 }

@@ -46,6 +46,10 @@ class ClientsController < ApplicationController
     end
   end
 
+  def client_list
+
+  end
+
 end
 
 

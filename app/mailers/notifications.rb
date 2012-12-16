@@ -6,6 +6,6 @@ class Notifications < ActionMailer::Base
     @stylist = stylist
     @greeting = "Hi"
 
-    mail to: "derricklannaman@gmail.com", :subject => "Welcome email from Beautiflow"
+    mail to: "derricklannaman@gmail.com", :subject => "Welcome to Beautiflow"
   end
 end

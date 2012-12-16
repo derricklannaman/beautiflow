@@ -1,5 +1,5 @@
-<div id="sign-in-dropdown">
-  <div id="sign-in-panel">
+<div id="sign-in-dropdown"> <!-- This is the main page dropdown -->
+  <div id="">
     <%= form_tag '/signin' do %>
       <div class="field">
         <h3>Sign In <span>with your email and password</span></h3>
@@ -8,11 +8,11 @@
 
           Password
           <%= password_field_tag 'password', placeholder="" %>
-          <%= button_tag "X", :id => "close-btn", :class => "btn-warning" %>
+          <%= link_to "X", root_path, :id => "close-btn", :class => "btn btn-warning" %>
       </div>
 
       <div class="field">
-        <%= submit_tag 'Sign In', id: "btn btn-success" %>
+        <%= submit_tag 'Sign In', class: "btn btn-success" %>
       </div>
     <% end %>
   </div>

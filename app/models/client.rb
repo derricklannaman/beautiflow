@@ -23,7 +23,8 @@ class Client < ActiveRecord::Base
   #                 :last_name, :photo, :remote_photo_url, :state, :street_address, :zip
 
   belongs_to :stylist
-  has_many   :services, :through => :transactions
+  has_many :appointments
+  # has_many   :services, :through => :transactions
 
   mount_uploader :photo, PictureUploader
 end

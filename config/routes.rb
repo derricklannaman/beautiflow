@@ -7,11 +7,13 @@ Beautiflow::Application.routes.draw do
     resources :clients
   end
 
-  resources :services
 
-  # routes for stylist profile page
 
-  get '/profiles/' => 'stylists#profile'
+  resources :appointments
+
+
+
+  # resources :services, :profiles
 
  # routes for sessions controller
 

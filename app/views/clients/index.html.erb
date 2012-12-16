@@ -3,6 +3,7 @@
 
     <div>
       <%= link_to "Add New Client", new_stylist_client_path, class: "btn btn-success" %>
+      <%= link_to "Back to Dashboard", stylist_path(@authenticated_user), class: "btn btn-warning" %>
     </div>
 
   <table id="listing-clients" summary="Client List">

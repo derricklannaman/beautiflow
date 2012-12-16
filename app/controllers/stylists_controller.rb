@@ -14,6 +14,9 @@ class StylistsController < ApplicationController
       flash[:notice] = "Welcome #{@stylist.first_name}, you have successfully created your account."
       session[:user_id] = @stylist.id
         redirect_to stylist_path(@stylist)
+
+     Notifications.welcome_email(@stylist).deliver
+
     else
       flash[:notice] = "Oops! Something went wrong. Please try again."
       render :new
@@ -23,7 +26,6 @@ class StylistsController < ApplicationController
   def show
     @stylist = Stylist.find(params[:id])
 
-    # Notifications.welcome_email(@stylist).deliver
   end
 
   def edit
@@ -42,9 +44,9 @@ class StylistsController < ApplicationController
       redirect_to root_path
   end
 
-  def profile
-     @stylist = @authenticated_user
-  end
+  # def profile
+  #    # @stylist = @authenticated_user
+  # end
 
 
 end

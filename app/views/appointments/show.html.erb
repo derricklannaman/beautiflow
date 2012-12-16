@@ -1,0 +1,17 @@
+
+<div id="show_appointment">
+ <h2>Appointment Details:</h2>
+
+  <p>Client name:
+    <%#= client.name %>
+  </p>
+  <p>Appointment Date: <%=  @appointment.appointment_date.strftime("%B %e, %Y")  %></p>
+
+  <%= link_to "Back to appointments", appointments_path, class: "btn btn-success" %>
+  <%= link_to "Edit Appointment", edit_appointment_path(@appointment), class: "btn btn-primary" %>
+  <%= link_to "Back to Dashboard", stylist_path(@authenticated_user), class: "btn btn-warning" %>
+  <%#= link_to "Delete Appointment", appointment_path(@appointment), class: "btn btn-danger" %>
+  <%= button_tag "Delete?", id: appointment.id, :class => "btn btn-danger" %>
+
+</div>
+

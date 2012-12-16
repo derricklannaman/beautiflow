@@ -10,6 +10,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  user_name       :string(255)
+#  slug            :string(255)
 #
 
 class Stylist < ActiveRecord::Base
@@ -19,8 +20,11 @@ class Stylist < ActiveRecord::Base
   extend FriendlyId
   friendly_id :user_name, :use => :slugged
 
+  has_one :profile
   has_many :clients
+  has_many :appointments
   has_many :services
+
 
 
   # mount_uploader :photo, PictureUploader

@@ -37,6 +37,8 @@ $(function(){
 
 // ============================================
 
+
+
 function add_focus_to_email(){
   $('#stylist_email').focus();
 }
@@ -118,8 +120,8 @@ function getFormattedDate(date){
 
 
 function hide_text_box(){
-  $('#text-client-box').slideUp(500);
-  $('#close-text-box').fadeOut(700);
+  $('#text-client-box').slideUp(200);
+  $('#close-text-box').fadeOut(200);
 }
 
 
@@ -150,7 +152,7 @@ function text_light_off2(){
 
 
 function reveal_text_box(){
-  $('#text-client-box').slideDown(800);
+  $('#text-client-box').slideDown(200);
   }
 
 

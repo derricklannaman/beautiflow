@@ -240,7 +240,12 @@ input {
   float:  left;
   width:  200px;
   height: 200px;
+}
 
+#client-photo img {
+  margin-bottom: 10px;
+  border: 10px solid #BBB;
+  border-radius: 9px;
 }
 #update_client_img {
   margin-top: 10px;
@@ -384,11 +389,21 @@ a.manage-btn {
 
 .form-detail {
   float: left;
-  width:  800px;
+  width:  660px;
   background: #FFF;
   padding:  20px;
   border: 10px solid #777;
   border-radius: 20px;
+}
+
+#form-detail-client {
+  float: left;
+  width:  660px;
+  background: #FFF;
+  padding:  20px;
+  border: 10px solid #777;
+  border-radius: 20px;
+  margin-bottom: 70px;
 }
 
 
@@ -406,13 +421,15 @@ a.manage-btn {
 }
 
 /*This is the drop down box to send a text*/
+/*#text-client-form {
+  float:  left;
+  width:  100px;
+}*/
+
 #text-client-box {
-  width: 300px;
-  position: relative;
-  top:  -312px;
-  left: 300px;
-  margin-left: 70px;
-  margin-bottom: 20px;
+  float:  left;
+  width: 250px;
+  margin-left:  17px;
   background: -webkit-linear-gradient(top,#EEE,#FFF);
   p {
     margin-left: 8px;
@@ -420,9 +437,10 @@ a.manage-btn {
 }
 
 #close-text-box {
-  margin-left: -27px;
-  margin-top: -633px;
-  border-radius: 4px;
+  float:  left;
+  width:  26px;
+  border-radius: 5px;
+  margin-left:  -26px;
 }
 
 /*aligns phone field on client show*/
@@ -442,10 +460,12 @@ margin-left: 2px;
 }
 /*This is the text client btn on client show page*/
 #create_text {
-  width: 300px;
-  margin-left: 370px;
+  float:  left;
+  width: 250px;
+  margin-left: 18px;
+/*  margin-left: 370px;
   margin-top: -634px;
-  font-size: 19px;
+*/  font-size: 19px;
   letter-spacing: 3px;
 }
 /*

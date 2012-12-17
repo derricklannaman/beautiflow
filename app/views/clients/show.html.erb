@@ -2,31 +2,11 @@
 
   <h2>Client Details</h2>
 
-<div class="form-detail">
+<div id="form-detail-client">
 
   <div id="client-photo">
-  <%= image_tag(@client.photo) %><br>
-    Client Photo:
+    <%= image_tag(@client.photo) %>
   </div>
-
-<!-- This is the stylist texting to client form  -->
-<div id="text-client-form">
-<div>
-  <input type="button" id="create_text" value="Text Client", class="btn btn-success" />
-  <input type="button" id="close-text-box" value="X", class="btn-success" />
-</div>
-
-<div id="text-client-box">
-  <%= form_tag '/message' do %>
-    <p><%= "Make a text to #{@client.first_name}" %>
-      <%= hidden_field_tag 'phone', @client.cell_phone %>
-    </p>
-    <p>Message:
-      <%= text_area_tag 'message' %>
-    </p>
-      <%= submit_tag 'Send Message', class: "btn btn-success" %>
-  <% end %>
-</div>
 
 <!-- ============================ -->
 
@@ -51,19 +31,36 @@
       <th>Client Since</th>
       <td><%= client_since %></td>
     </tr>
+  </table>
 
-    </table>
   <div>
     <%= link_to "Edit", edit_stylist_client_path(@authenticated_user, @client), class: 'btn btn-primary' %>
 
     <%= button_tag "Delete?", id: 'confirm_deletion', :class => "btn btn-danger" %>
-
+    <%#= button_tag "Delete?", @client, :class => "btn btn-danger" %>
   </div>
-</div><!-- client-detail -->
-<div class="clear"></div>
+</div>
 
+<!-- This is the stylist texting to client form  -->
 
-</div><!-- end text-client-form -->
+<div id="text-client-form">
+<div>
+  <input type="button" id="create_text" value="Text Client", class="btn btn-success" />
+  <input type="button" id="close-text-box" value="X", class="btn-success" />
+</div>
+
+<div id="text-client-box">
+  <%= form_tag '/message' do %>
+    <p><%= "Make a text to #{@client.first_name}" %>
+      <%= hidden_field_tag 'phone', @client.cell_phone %>
+    </p>
+    <p>Message:
+      <%= text_area_tag 'message' %>
+    </p>
+      <%= submit_tag 'Send Message', class: "btn btn-success" %>
+  <% end %>
+</div>
+</div>
 
 
 

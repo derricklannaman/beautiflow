@@ -16,7 +16,7 @@ $(function(){
   $('#create_text').click(show_close_button);
   $('#close-text-box').click(hide_text_box);
   $('#client-delete').hide();
-  $('#confirm_deletion').click(delete_client);
+  // $('#confirm_deletion').click(delete_client);
   $('button.btn.btn-danger').click(delete_client);
   // $('#confirm_deletion').click(delete_appointment);
   // $('button.btn.btn-danger').click(delete_appointment);
@@ -51,10 +51,9 @@ function getFormattedDate(date){
 }
 
 
- function delete_client(){
+ function delete_client() {
 
-  var stylist_path = $(this).siblings().first();
-  stylist_path = $(stylist_path).attr('href');
+  var stylist_path = $(this).parent().siblings().first().children().attr('href');
 
   var row = $(this).closest('tr').get(0);
 

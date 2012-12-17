@@ -18,19 +18,20 @@ class AppointmentsController < ApplicationController
     @client = Client.find_by_id(params[:client_name])
     @appointment.client = @client
     if @appointment.save
-      flash[:notice] = "You have successfully created the appointment."
+      # flash[:notice] = "You have successfully created the appointment."
         redirect_to appointment_path(@appointment)
     else
-      flash[:error] = "Oops! Something went wrong. Please try again."
+      # flash[:error] = "Oops! Something went wrong. Please try again."
       render :new
     end
   end
 
   def show
-    # @client = Client.find_by_id(params[:client_name])
-    # @appointment.client = @client
-
     @appointment = Appointment.find(params[:id])
+    @appointment.stylist = @authenticated_user
+
+    @client = Client.find_by_id(params[:client_name])
+    @appointment.client = @client
   end
 
   def edit
@@ -40,13 +41,18 @@ class AppointmentsController < ApplicationController
   def update
     @appointment = Appointment.find(params[:id])
     @appointment.update_attributes(params[:appointment])
-      redirect_to appointment_path(@appointment)
+      redirect_to appointments_path
   end
 
   def destroy
     Appointment.find(params[:id]).destroy
-    flash[:error] = "Appointment deleted!"
-      redirect_to appointments_path
+    # flash[:error] = "Appointment deleted!"
+
+
+    respond_to do |format|
+      format.html { redirect_to appointments_path }
+      format.json { render json: params }
+    end
   end
 
 

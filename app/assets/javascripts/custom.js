@@ -1,6 +1,8 @@
 $(function(){
   $('#sign-in-dropdown').hide();
   $('#member-btn').click(reveal_drop);
+  $('#member-btn').click(add_focus_to_email);
+
   // $('#close-btn').click(hide_dropped_form);
   $('#manage-client').hover(backlight_on, backlight_off);
   $('#manage-service').hover(backlight_on, backlight_off);
@@ -16,6 +18,8 @@ $(function(){
   $('#client-delete').hide();
   $('#confirm_deletion').click(delete_client);
   $('button.btn.btn-danger').click(delete_client);
+  // $('#confirm_deletion').click(delete_appointment);
+  // $('button.btn.btn-danger').click(delete_appointment);
   // $('#sign-in-panel').hide();
   $('#appointment_appointment_date').datepicker({
         dateFormat: 'dd-mm-yy',
@@ -27,25 +31,23 @@ $(function(){
             source: $('#appointment_client_name').data('autocomplete-source')
         });
 
-
+  // $("#slider").FlowSlider();
 
 });
 
+// ============================================
 
+function add_focus_to_email(){
+  $('#stylist_email').focus();
+}
 
-function getFormattedDate(date) {
+function getFormattedDate(date){
     var day = date.getDate();
     var month = date.getMonth() + 1;
     var year = date.getFullYear().toString().slice(2);
     return day + '-' + month + '-' + year;
 }
 
- // function delete_client(){
- //   alertify.alert( "Are you sure you want to delete this client?", function(){
- //    console.log('we clicked ok');
- //  });
- // }
-
 
  function delete_client(){
 
@@ -74,34 +76,29 @@ function getFormattedDate(date) {
  });
 
 }
+// =====================
+ // function delete_appointment(){
 
- function delete_client(){
+ //  alertify.confirm( "Are you sure you want to delete this appointment?", function (e) {
+//   if (e) {
 
-  var stylist_path = $(this).siblings().first();
-  stylist_path = $(stylist_path).attr('href');
+//     $.ajax({
+//       type: "DELETE",
+//       url: appointment_path,
+//       dataType: 'json'
+//     }).done(function( msg ) {
+//         console.log('it should delete');
 
-  var row = $(this).closest('tr').get(0);
+//     });
 
-  alertify.confirm( "Are you sure you want to delete this client?", function (e) {
-  if (e) {
+//   }
+//   else  {
+//     console.log('we clicked cancel');
+//   }
 
-    $.ajax({
-      type: "DELETE",
-      url: stylist_path,
-      dataType: 'json'
-    }).done(function( msg ) {
-        console.log('it should delete');
-       $(row).hide();
-    });
+//  });
 
-  }
-  else  {
-    console.log('we clicked cancel');
-  }
-
- });
-
-}
+// }
 
 
 // function b2(){

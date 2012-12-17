@@ -7,23 +7,47 @@ body {
   /*background: #FF9200; #9051b2*/
 }
 #main_photo {
-/*  width:  960px;
+  width:  980px;
   height: 475px;
-*/  margin-top: -101px;
-/*  background: url('http://woman.thenest.com/DM-Resize/photos.demandstudios.com/getty/article/165/7/57279521.jpg?w=600&h=600&keep_ratio=1') center center no-repeat;
+  margin-top: -101px;
+  margin-left:  50px;
+  background: url('http://woman.thenest.com/DM-Resize/photos.demandstudios.com/getty/article/165/7/57279521.jpg?w=600&h=600&keep_ratio=1') center center no-repeat;
   background-size: cover;
-  box-shadow: inset 55px 34px 67px #D1B7DF;
-  -webkit-filter: blur(3px);
-*/}
+  /*box-shadow: inset 55px 34px 67px #D1B7DF;*/
+  /*-webkit-filter: blur(3px);*/
+}
 
 
 
 .container {
   margin: 0 auto;
-  width:  960px;
+  width:  1060px;
   min-height: 600px;
+  /*font-family: "Lucida Grande", arial, helvetica, sans-serif;*/
 
 }
+
+th {
+  background: #FF9200;
+  color: #FFF;
+  text-align: center;
+  width: 12.2857142857143%;
+}
+
+td, th {
+  font-family: "Lucida Grande", arial, helvetica, sans-serif;
+  font-size: 12px;
+  padding: 4px 6px;
+  border: 1px solid #9051b2;
+}
+
+#listing-clients {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 140px;
+}
+
 
 a {
 
@@ -35,13 +59,50 @@ li {
   list-style: none;
 }
 
+#control_panel {
+  float:  left;
+  width:  165px;
+}
+
+#control_panel li {
+  float:  left;
+  width: 20px;
+  margin-left:  5px;
+}
+
+.controls {
+  margin-left: 16px;
+}
+
+.btn.btn-success.client_btn {
+  margin-left: -50px;
+}
+
+.btn.btn-primary.client_btn {
+  margin-left: -16px;
+}
+
+.btn.btn-danger.client_btn {
+  margin-left: 12px;
+  margin-top: 0px;
+}
+
+.client_btn {
+  padding-left:  10px;
+}
+
 input {
   width:  200px;
   min-height: 30px;
 }
+
 .main-dashboard {
   margin-left:  44px;
 }
+
+
+
+
 /*Navigation/Headings */
 .navbar {
   min-height: 50px;
@@ -89,15 +150,17 @@ input {
 
 
 .stylist-info-box {
-  border: 1px solid #F1ECEC;
+  /*border: 1px solid #F1ECEC;*/
+  font-family: "Lucida Grande", arial, helvetica, sans-serif;
+  color:  rgb(43, 0, 66);
   padding-right: 75px;
   padding-left: 112px;
   margin: 20px 77px 20px 48px;
-  border-radius: 12px;
-  text-shadow: 2px 1px 3px #000;
+  /*border-radius: 12px;*/
+  /*text-shadow: 2px 1px 3px #000;*/
   /*background: #FF9200;*/
-  background: -webkit-radial-gradient(circle, #FFF,#9051B2);
-  box-shadow: inset 0px 0px 8px #333;
+  /*background: -webkit-radial-gradient(circle, #FFF,#9051B2);*/
+  /*box-shadow: inset 0px 0px 8px #333;*/
   p{
     font-size: 18px;
   }
@@ -116,8 +179,8 @@ input {
   margin-left: 30px;
   padding-top:  10px;
   padding-left: 50px;
-  text-shadow:  1px 1px 1px #333;
-  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
+  /*text-shadow:  1px 1px 1px #333;*/
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid #888;
   border-right: 1px solid #999;
   border-left: 1px solid #EEE;
@@ -125,12 +188,12 @@ input {
   list-style-type: none;
   display: inline-block;
     /*border: 10px solid rgb(131, 46, 178);*/
-    border: 10px solid #EAABF2;
-    border-radius: 20px;
+/*    border: 10px solid #EAABF2;
+    border-radius: 20px;*/
 }
 
 #stylist-deleted {
-  margin-left: -25px;
+  margin-left: -17px;
 }
 
 /*button styling*/
@@ -152,23 +215,40 @@ input {
     }
 }
 
+
+.form-add-detail {
+  float: left;
+  width:  900px;
+  min-height: 500px;
+  background: #FFF;
+  padding:  20px;
+  border: 10px solid #777;
+  border-radius: 20px;
+}
+
 #client_info_panel {
   float:  left;
-  width:  300px;
+  width:  250px;
+}
+
+#client_contact_panel {
+  float:  left;
+  width:  250px;
 }
 
 #client_photo_panel {
-  position: relative;
-  top:  -170px;
-  left: 560px;
+  float:  left;
   width:  200px;
   height: 200px;
 
 }
-.client_img_field {
-
+#update_client_img {
+  margin-top: 10px;
 }
 
+#close-btn {
+  margin-top: -11px;
+}
 
 /*
 #stylist_photo_panel {
@@ -214,14 +294,14 @@ input {
   width:  1960px;
   margin-top: -10px;
   padding-bottom: 10px;
-  background: url('batthern.png');
+  background: url('textured_stripes.png');
   color:  #2B0042;
   letter-spacing: 2px;
-
-  /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(248, 152, 16)), to(#FFF));*/
-
 }
 
+#sign_in_content {
+  margin-left:  160px;
+}
 
 #sign-in-panel, #show_appointment {
   background: #FFF;
@@ -231,17 +311,45 @@ input {
   margin-left:  100px;
 }
 
+#appointment_details {
+  float:  left;
+  width: 500px;
+}
+
+.appt_btn_box {
+  margin: 5px;
+}
+
+.btn.btn-danger.appt_btn_box {
+  margin-top: 2px;
+}
+
+#show_appointment {
+  min-height: 250px;
+}
+
+
+
+#show_appointment ul li {
+  float: left;
+  width:  200px;
+  padding: 10px;
+  box-shadow: inset 0px 0px -1px rgba(180, 180, 180, .5);
+  background: rgba(214, 190, 226, 0.5);
+}
+
+
 .control-plate {
   background: -webkit-gradient(linear, left top, right top, from(#FFEABD), to(#FFBA23));
   background: -moz-linear-gradient(left, #FFF, #FFBA23);
-  width: 174px;
-  height: 153px;
+  width: 175px;
+  height: 82px;
   border-radius: 3px;
   position: relative;
   top:  27px;
-  left: -43px;
-  margin-top: -7px;
-  margin-left: 56px;
+  left: -52px;
+  margin-top: -19px;
+  margin-left: 64px;
   padding-top:  10px;
   text-shadow:  1px 1px 1px #333;
   box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.9);
@@ -256,12 +364,12 @@ input {
   float:  left;
   margin: 4px;
   margin-left: 27px;
-  width: 200px;
-  height: 200px;
+  width: 205px;
+  height: 100px;
   background-color: #FF9E00;
   border-radius: 3px;
   border: 1px solid #F3F3F3;
-  box-shadow: inset 2px 2px 20px #333;
+  box-shadow: inset 2px 2px 10px #333;
   /*display: block;*/
 }
 
@@ -283,19 +391,18 @@ a.manage-btn {
   border-radius: 20px;
 }
 
-.form-add-detail {
-  /*float: left;*/
-  width:  900px;
+
+#stylist-input-panel {
+  /*float:  left;*/
+  width:  600px;
+  margin-top: 0px;
+  min-height: 500px;
   background: #FFF;
   padding:  20px;
   border: 10px solid #777;
   border-radius: 20px;
-}
 
-#stylist-input-panel {
-  /*float:  left;*/
-  width:  300px;
-  margin-top: 0px;
+
 }
 
 /*This is the drop down box to send a text*/
@@ -341,7 +448,10 @@ margin-left: 2px;
   font-size: 19px;
   letter-spacing: 3px;
 }
-
+/*
+#appointments ul li a {
+  font-size: 14px;
+}*/
 
 
 /* -----------------------------------------------------

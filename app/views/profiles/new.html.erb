@@ -1,7 +1,7 @@
-<%= form_for @authenticated_user do |f| %>
+<%= form_for @profile do |f| %>
 
 <div class='field'>
-  <%= f.label :name, "Name" %>
+  <%= f.label :firstname, "Name" %>
   <%= f.text_field :name %>
 </div>
 
@@ -29,6 +29,10 @@
   <%= f.label :name, "Name" %>
   <%= f.text_field :name %>
 </div>
+
+  <div class="form_buttons"></div>
+    <%= f.submit class: 'btn btn-success' %>
+  </div>
 
 
 <% end %>

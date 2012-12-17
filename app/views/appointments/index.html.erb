@@ -18,8 +18,7 @@
 
         <% @appointments_by_date[date].each do |appointment| %>
 
-          <li><%#= link_to appointment.client.first_name, '#'  %></li>
-          <li><%= link_to "harry", '#'  %></li>
+          <li><%= link_to appointment.client_name, appointment_path(appointment.id)  %></li>
         <% end %>
       </ul>
     <% end %>

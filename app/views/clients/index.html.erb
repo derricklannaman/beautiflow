@@ -8,16 +8,16 @@
 
   <table id="listing-clients" summary="Client List">
     <tr class="header">
-      <th>First Name | </th>
-      <th>Last Name | </th>
-      <th>Address | </th>
-      <th>City | </th>
-      <th>State | </th>
-      <th>Zip | </th>
-      <th>Cell Phone | </th>
-      <th>Home Phone | </th>
-      <th>Email  | </th>
-      <th>Actions   </th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Cell Phone</th>
+      <th>Home Phone</th>
+      <th>Email</th>
+      <th>Actions</th>
     </tr>
     <% @clients.each do |client| %>
     <tr>
@@ -30,11 +30,13 @@
       <td><%= client.cell_phone %></td>
       <td><%= client.home_phone %></td>
       <td><%= client.client_email %></td>
-        <td class="controls">
-          <%= link_to "View", stylist_client_path(@authenticated_user, client), class: "btn btn-success"  %>
-          <%= link_to "Edit", edit_stylist_client_path(@authenticated_user, client), class: "btn btn-primary" %>
-          <%= button_tag "Delete?", id: client.id, :class => "btn btn-danger" %>
-        </td>
+      <td class="controls">
+        <ul id="control_panel">
+        <li><%= link_to "View", stylist_client_path(@authenticated_user, client), class: "btn btn-success client_btn"  %></li>
+        <li><%= link_to "Edit", edit_stylist_client_path(@authenticated_user, client), class: "btn btn-primary client_btn" %></li>
+        <li><%= button_tag "Delete?", id: client.id, :class => "btn btn-danger client_btn" %></li>
+        </ul>
+      </td>
     </tr>
   <% end %>
   </table>

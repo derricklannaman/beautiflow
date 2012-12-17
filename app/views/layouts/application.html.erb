@@ -4,15 +4,15 @@
   <title>BeautiFlow</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= javascript_include_tag "alertify.js" %>
+  <%= javascript_include_tag "alertify.js" %>
+
      <%= render "shared/sign_in" %>
      <%= render "shared/nav" %>
   <div class="container">
-
-
 
      <%= yield :submenu %>
 

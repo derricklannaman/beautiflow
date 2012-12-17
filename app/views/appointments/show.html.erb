@@ -1,17 +1,27 @@
 
 <div id="show_appointment">
- <h2>Appointment Details:</h2>
+ <div id="appointment_details">
+ <h2>Review Appointment Details:</h2>
 
-  <p>Client name:
-    <%#= client.name %>
+  <p>Client name: <%= @appointment.client_name.capitalize %>
   </p>
   <p>Appointment Date: <%=  @appointment.appointment_date.strftime("%B %e, %Y")  %></p>
+</div>
 
-  <%= link_to "Back to appointments", appointments_path, class: "btn btn-success" %>
-  <%= link_to "Edit Appointment", edit_appointment_path(@appointment), class: "btn btn-primary" %>
-  <%= link_to "Back to Dashboard", stylist_path(@authenticated_user), class: "btn btn-warning" %>
-  <%#= link_to "Delete Appointment", appointment_path(@appointment), class: "btn btn-danger" %>
-  <%= button_tag "Delete?", id: appointment.id, :class => "btn btn-danger" %>
+
+  <%#= button_tag "Delete?", id: "delete_appt", :class => "btn btn-danger" %>
+
+<ul id="appointment_actions">
+  <li><%= link_to "Edit Appointment", edit_appointment_path(@appointment), class: "btn btn-primary appt_btn_box" %></li>
+  <li><%= link_to "Delete Appointment", @appointment, method: :delete, data: {confirm: "Delete"}, class: "btn btn-danger appt_btn_box" %></li>
+
+
+  <li><%= link_to "Back to appointments", appointments_path, class: "btn btn-success appt_btn_box" %></li>
+  <li><%= link_to "Back to Dashboard", @authenticated_user, class: "btn btn-warning appt_btn_box" %></li>
+  <li><%= link_to "See Client Details", stylist_clients_path(@authenticated_user, @client), class: "btn btn-success appt_btn_box" %></li>
+  <li><%= link_to "Appointment History", stylist_clients_path(@authenticated_user), class: "btn btn-info appt_btn_box" %></li>
+</ul>
+
 
 </div>
 

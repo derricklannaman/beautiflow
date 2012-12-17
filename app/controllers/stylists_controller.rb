@@ -44,9 +44,13 @@ class StylistsController < ApplicationController
       redirect_to root_path
   end
 
-  # def profile
-  #    # @stylist = @authenticated_user
-  # end
+   # def new_profile
+   #    @profile = Stylist.find(params[:id]).new
+   # end
+
+   # def show_profile
+   #    @stylist = Stylist.find(params[:id])
+   # end
 
 
 end

@@ -1,7 +1,9 @@
 class ClientsController < ApplicationController
 
   def index
-    @clients = @authenticated_user.clients.all
+    # @clients = @authenticated_user.clients.all
+    @clients = @authenticated_user.clients.order("clients.last_name ASC")
+
   end
 
   def new
@@ -26,7 +28,7 @@ class ClientsController < ApplicationController
   def update
     @client = Client.find(params[:id])
     @client.update_attributes(params[:client])
-      redirect_to stylist_client_path(@client)
+      redirect_to stylist_clients_path(@authenticated_user)
   end
 
   def show
@@ -36,9 +38,10 @@ class ClientsController < ApplicationController
 
   def destroy
     @client = Client.find(params[:id])
+
     @client.destroy
 
-    flash[:notice] = "Client deleted"
+    # flash[:notice] = "Client deleted"
 
     respond_to do |format|
       format.html { redirect_to root_path }
@@ -46,9 +49,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  def client_list
-
-  end
 
 end
 

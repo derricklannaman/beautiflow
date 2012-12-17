@@ -8,11 +8,11 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @stylist = Stylist.find(params[:id])
+    # @stylist = Stylist.find(params[:id])
     @profile = Profile.new(params[:profile])
     if @profile.save
       flash[:notice] = "Your full profile has been created."
-      redirect_to profile_path
+      redirect_to @profile
     else
       render :new
     end

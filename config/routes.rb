@@ -9,11 +9,7 @@ Beautiflow::Application.routes.draw do
 
 
 
-  resources :appointments
-
-
-
-  # resources :services, :profiles
+  resources :appointments, :profiles
 
  # routes for sessions controller
 

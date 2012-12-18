@@ -15,7 +15,8 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(params[:appointment])
     @appointment.stylist = @authenticated_user
 
-    @client = Client.find_by_id(params[:client_name])
+    # @client = Client.find_by_id(params[:client_name])
+    @client = Client.find_by_id(params[:id])
     @appointment.client = @client
     if @appointment.save
       # flash[:notice] = "You have successfully created the appointment."

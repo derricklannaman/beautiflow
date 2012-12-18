@@ -9,6 +9,7 @@
 #  client_id        :integer
 #  appointment_date :date
 #  client_name      :string(255)
+#  appointment_time :time
 #
 
 class Appointment < ActiveRecord::Base

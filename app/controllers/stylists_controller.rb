@@ -11,14 +11,14 @@ class StylistsController < ApplicationController
   def create
     @stylist = Stylist.new(params[:stylist])
     if @stylist.save
-      flash[:notice] = "Welcome #{@stylist.first_name}, you have successfully created your account."
+      flash[:alert] = "Welcome #{@stylist.first_name}, you have successfully created your account."
       session[:user_id] = @stylist.id
         redirect_to stylist_path(@stylist)
 
      Notifications.welcome_email(@stylist).deliver
 
     else
-      flash[:notice] = "Oops! Something went wrong. Please try again."
+      flash[:alert] = "Oops! Something went wrong. Please try again."
       render :new
     end
   end
@@ -40,7 +40,7 @@ class StylistsController < ApplicationController
 
   def destroy
     Stylist.find(params[:id]).destroy
-    flash[:notice] = "Account deleted!"
+    flash[:alert] = "Account deleted!"
       redirect_to root_path
   end
 

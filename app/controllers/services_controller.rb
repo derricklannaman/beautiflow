@@ -11,10 +11,10 @@ class ServicesController < ApplicationController
   def create
     @service = Service.new
       if @service.save
-        flash[:notice] = "You have successfully added a new service."
+        flash[:alert] = "You have successfully added a new service."
         redirect_to services_path
       else
-        flash[:notice] = "Sorry, your service wasn't added. Please try again."
+        flash[:error] = "Sorry, your service wasn't added. Please try again."
         render :new
       end
   end

@@ -1,8 +1,7 @@
 class AppointmentsController < ApplicationController
 
-
   def index
-    @appointments = @authenticated_user.appointments   #order('appointment time', DESC)
+    @appointments = @authenticated_user.appointments
     @appointments_by_date = @appointments.group_by(&:appointment_date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
   end
@@ -15,14 +14,13 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(params[:appointment])
     @appointment.stylist = @authenticated_user
 
-    # @client = Client.find_by_id(params[:client_name])
     @client = Client.find_by_id(params[:id])
     @appointment.client = @client
     if @appointment.save
-      # flash[:notice] = "You have successfully created the appointment."
+      flash[:alert] = "You have successfully created the appointment."
         redirect_to appointment_path(@appointment)
     else
-      # flash[:error] = "Oops! Something went wrong. Please try again."
+      flash[:error] = "Oops! Something went wrong. Please try again."
       render :new
     end
   end
@@ -47,7 +45,7 @@ class AppointmentsController < ApplicationController
 
   def destroy
     Appointment.find(params[:id]).destroy
-    # flash[:error] = "Appointment deleted!"
+    flash[:error] = "Appointment deleted!"
 
 
     respond_to do |format|
@@ -55,12 +53,6 @@ class AppointmentsController < ApplicationController
       format.json { render json: params }
     end
   end
-
-
-
-
-
-
 
 end
 

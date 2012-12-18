@@ -1,8 +1,8 @@
 $(function(){
   $('#sign-in-dropdown').hide();
+  $('.alert.alert-alert').delay(2000).fadeOut(2000);
   $('#member-btn').click(reveal_drop);
   $('#member-btn').click(add_focus_to_email);
-
   // $('#close-btn').click(hide_dropped_form);
   $('#manage-client').hover(backlight_on, backlight_off);
   $('#manage-service').hover(backlight_on, backlight_off);
@@ -21,23 +21,27 @@ $(function(){
   // $('#confirm_deletion').click(delete_appointment);
   // $('button.btn.btn-danger').click(delete_appointment);
   // $('#sign-in-panel').hide();
+  $('#appointment_time').timepicker();
+
+
+  // Datepicker
+
   $('#appointment_appointment_date').datepicker({
         dateFormat: 'dd-mm-yy',
         minDate: getFormattedDate(new Date())
       });
 
+  // Autocomplete
 
   $('#appointment_client_name').autocomplete({
             source: $('#appointment_client_name').data('autocomplete-source')
         });
 
-  // $("#slider").FlowSlider();
+
 
 });
 
 // ============================================
-
-
 
 function add_focus_to_email(){
   $('#stylist_email').focus();

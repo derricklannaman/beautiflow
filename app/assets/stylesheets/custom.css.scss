@@ -167,7 +167,7 @@ input {
 }
 
 .outer-plate {
-  background: #FFF;
+  background: rgb(131, 46, 178);
   /*background:url('brushed_alu.png');*/
   width:  850px;
   border-radius: 12px;
@@ -179,7 +179,6 @@ input {
   margin-left: 30px;
   padding-top:  10px;
   padding-left: 50px;
-  /*text-shadow:  1px 1px 1px #333;*/
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid #888;
   border-right: 1px solid #999;
@@ -187,13 +186,11 @@ input {
   border-top: 1px solid #EEE;
   list-style-type: none;
   display: inline-block;
-    /*border: 10px solid rgb(131, 46, 178);*/
-/*    border: 10px solid #EAABF2;
-    border-radius: 20px;*/
+
 }
 
-#stylist-deleted {
-  margin-left: -17px;
+#close-stylist-account {
+  margin-left: 21px;
 }
 
 /*button styling*/

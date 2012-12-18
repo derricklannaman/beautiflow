@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
     # @stylist = Stylist.find(params[:id])
     @profile = Profile.new(params[:profile])
     if @profile.save
-      flash[:notice] = "Your full profile has been created."
+      flash[:alert] = "Your full profile has been created."
       redirect_to @profile
     else
       render :new
@@ -35,7 +35,7 @@ class ProfilesController < ApplicationController
   def destroy
     @profile = Profile.find(params[:id])
     @profile.destroy
-    flash[:notice] = "Account deleted!"
+    flash[:alert] = "Account deleted!"
   end
 
 end

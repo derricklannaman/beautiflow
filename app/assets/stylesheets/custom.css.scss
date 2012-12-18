@@ -2,7 +2,6 @@
 
 
 body {
-  /*background: -webkit-radial-gradient(circle, #FFF,#9051B2);*/
   background: -webkit-gradient(radial, center center, 6, center center, 1200, from(#FFF), to(#9051b2));
   /*background: #FF9200; #9051b2*/
 }
@@ -484,6 +483,7 @@ margin-left: 2px;
   margin-left:  30px;
   margin-right:  20px;
   padding-left: 20px;
+  box-shadow: 1px 1px 10px #000;
   font-family: "Lucida Grande", arial, helvetica, sans-serif;
   /*font-size: 18px;*/
   border: 1px solid #999;
@@ -518,6 +518,7 @@ margin-left: 2px;
   font-family: "Lucida Grande", arial, helvetica, sans-serif;
   /*font-size: 18px;*/
   border: 1px solid #999;
+  box-shadow: 1px 1px 10px #000;
   background: -webkit-linear-gradient(top,#84E900,#569700);
    li {
     font-size: 16px;

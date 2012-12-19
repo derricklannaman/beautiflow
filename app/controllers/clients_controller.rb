@@ -42,7 +42,7 @@ class ClientsController < ApplicationController
     @client.destroy
 
     flash[:alert] = "Client deleted"
-    redirect_to stylist_clients_path(@authenticated_user, @client)
+    # redirect_to stylist_clients_path(@authenticated_user, @client)
 
     respond_to do |format|
       format.html { redirect_to root_path }

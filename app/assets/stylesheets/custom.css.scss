@@ -166,12 +166,12 @@ input {
 }
 
 .outer-plate {
-  background: rgb(131, 46, 178);
-  /*background:url('brushed_alu.png');*/
+  /*background: rgb(131, 46, 178);*/
+  background:url('brushed_alu.png');
   width:  850px;
   border-radius: 12px;
   text-align: center;
-  color:  #FFF;
+  /*color:  #FFF;*/
   top:  27px;
   left: -43px;
   margin-top: 10px;

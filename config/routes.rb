@@ -2,33 +2,26 @@ Beautiflow::Application.routes.draw do
 
   root :to => 'pages#index'
 
-
   resources :stylists do
     resources :clients
   end
 
-
-
   resources :appointments, :profiles
 
  # routes for sessions controller
-
   get   '/signin'  => 'sessions#new'
   post  '/signin'  => 'sessions#create'
   get   '/signout' => 'sessions#destroy'
 
  # routes for stripe controller
-
   get '/pricing' => 'stripe#new'
   post '/stripe' => 'stripe#create'
 
   # routes for twilio controller
-
   get '/message' => 'twilio#new'
   post '/message' => 'twilio#message'
 
  # routes for pages controller
-
   scope :controller    => :pages do
     # match '/pricing'   => :pricing
     match '/about'     => :about

@@ -15,3 +15,12 @@ production:
   pool: 5
   username: postgres
   password: mateo525
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: beautiflow_dev
+  host: localhost
+  pool: 5
+  username: postgres
+  password: mateo525

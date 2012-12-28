@@ -14,7 +14,7 @@ class ClientsController < ApplicationController
     @client = @authenticated_user.clients.new(params[:client])
 
     if @client.save
-      redirect_to stylist_client_path(@authenticated_user, @client)
+      redirect_to stylist_client_path(@authenticated_user, @client), alert: "A new client has been added."
     else
       render :new
     end

@@ -25,6 +25,8 @@ class Stylist < ActiveRecord::Base
   has_many :appointments
   has_many :services
 
+  #scope :lannaman, where(:last_name => "Lannaman" )
+  # ********This is a way to name your sql queries
 
 
   # mount_uploader :photo, PictureUploader

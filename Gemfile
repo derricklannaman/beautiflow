@@ -2,21 +2,22 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
 
-gem "pg"
-gem "carrierwave"
-gem "fog"
-gem 'rmagick'
-gem "twilio-ruby"
+gem 'pg'
+gem 'carrierwave'
+gem 'fog'
+# gem 'rmagick'
+gem 'twilio-ruby'
 gem 'aws-ses'
 gem 'stripe'
 gem 'friendly_id'
-gem "bcrypt-ruby"
+gem 'bcrypt-ruby'
 gem 'jquery-rails'
+gem 'haml'
 
 group :development do
-  gem "pry-rails"
-  gem "rails-footnotes"
-  gem "annotate"
+  gem 'pry-rails'
+  gem 'rails-footnotes'
+  gem 'annotate'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'

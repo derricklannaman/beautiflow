@@ -1,7 +1,6 @@
 class ClientsController < ApplicationController
 
   def index
-    # @clients = @authenticated_user.clients.all
     @clients = @authenticated_user.clients.order("clients.last_name ASC")
 
   end

@@ -1,0 +1,31 @@
+%h1 Pricing
+
+%#free_version
+  %h4#title Free Version
+    %ul
+     %li Lorem ipsum dolor sit amet
+     %li Aliquam tincidunt mauris eu risus.
+     %li Vestibulum auctor dapibus neque.
+
+%#value_version
+  %h4#title Most Popular
+    %ul
+     %li Lorem ipsum dolor sit amet, consectetuer
+     %li Aliquam tincidunt mauris eu risus.
+     %li Vestibulum auctor dapibus neque.
+     %li Aliquam tincidunt mauris eu risus.
+     %li Vestibulum auctor dapibus neque.
+
+  <div id="transaction">
+  %#transaction
+    - if @authenticated_user
+      <script src="https://button.stripe.com/v1/button.js" class="stripe-button"
+            data-key="<%= STRIPE_PUB %>"></script>
+     - else
+      = link_to 'Sign Up', new_stylist_path, class: 'btn btn-success'
+
+      = form_tag '/stripe', :id => 'stripeform', :remote => true do
+
+
+
+

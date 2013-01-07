@@ -26,5 +26,5 @@ class Client < ActiveRecord::Base
   has_many :appointments
   # has_many   :services, :through => :transactions
 
-  mount_uploader :photo, PictureUploader
+  # mount_uploader :photo, PictureUploader
 end

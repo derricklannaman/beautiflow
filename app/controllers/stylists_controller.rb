@@ -18,7 +18,7 @@ class StylistsController < ApplicationController
      Notifications.welcome_email(@stylist).deliver
 
     else
-      flash[:alert] = "Oops! Something went wrong. Please try again."
+      # flash[:alert] = "Oops! Something went wrong. Please try again."
       render :new
     end
   end

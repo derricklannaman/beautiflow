@@ -1,4 +1,16 @@
 <%= form_for(@appointment) do |f| %>
+ <% if @appointment.errors.any? %>
+  <div class="error_explaination">
+    <h2><%= pluralize(@appointment.error.count, "error") %> prohibited your
+     appointment from being completed</h2>
+    <ul>
+      <% @appointment.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %><!-- ends the if statement -->
+
   <div class="field">
     <%= f.label :client_name %>
     <%= f.text_field :client_name, data: {autocomplete_source: @authenticated_user.clients.all.map(&:first_name) }%>
@@ -9,10 +21,10 @@
     <%= f.text_field :appointment_date %>
   </div>
 
-  <!-- <div class="field" id="appointment_time"> -->
-    <%#= f.label :appointment_time %>
-    <%#= f.text_field :appointment_time %>
-  <!-- </div> -->
+  <div class="field" id="appointment_time">
+    <%= f.label :appointment_time %>
+    <%= f.text_field :appointment_time %>
+  </div>
 
   <div class="form_buttons">
     <%= f.submit :class => "btn btn-success"  %>
@@ -20,17 +32,7 @@
 
 <% end %>
 
- <%# if @appointment.errors.any? %>
-<!--   <div id="error_explaination">
-    <h2><%#= pluralize(@appointment.error.count, "error") %> prohibited your appointment
-    from being completed</h2>
-    <ul>
-      <%# @appointment.errors.full_messages.each do |msg| %>
-      <li><%#= msg %></li>
-      <%# end %>
-    </ul>
-  </div> -->
-<%# end %><!-- ends the if statement -->
+
 
 
 

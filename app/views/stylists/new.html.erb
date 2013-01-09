@@ -1,11 +1,16 @@
 <h1>Sign Up</h1>
-<% if @stylist.errors.any? %>
+
+ <% if @stylist.errors.any? %>
+  <div class="error_explaination">
+    <h2><%= pluralize(@stylist.errors.count, "error") %> prohibited your
+     sign up from being completed</h2>
     <ul>
-      <% for message in @stylist.errors.full_messages %>
-      <li><%= message %></li>
+      <% @stylist.errors.full_messages.each do |msg| %>
+      <li><%= link_to image_tag('error.svg', size: '10x10', id: 'error_symbol'), msg %> <%= msg %></li>
+      <% end %>
     </ul>
-    <% end %>
-<% end %>
+  </div>
+<% end %><!-- ends errors -->
 
 <div class="form">
 <%= form_for @stylist, :html => {:multipart => true} do |f| %>

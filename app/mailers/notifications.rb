@@ -6,6 +6,6 @@ class Notifications < ActionMailer::Base
     @stylist = stylist
     @url = "http://damp-badlands-6555.herokuapp.com/"
 
-    mail to: stylist_email, :subject => "Welcome to Beautiflow"
+    mail to: stylist.stylist_email, :subject => "Welcome to Beautiflow"
   end
 end

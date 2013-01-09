@@ -192,7 +192,7 @@ input {
 
 .outer-plate {
   /*background: rgb(131, 46, 178);*/
-  background:url('brushed_alu.png');
+  background:url('bright_squares.png')!important;
   width:  850px;
   border-radius: 12px;
   text-align: center;
@@ -441,8 +441,25 @@ a.manage-btn {
   box-shadow: 0px 0px 13px #000;
 }
 
-.sign_up_form {
+#field_is_required {
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
 
+.sign_up_form .field {
+  margin-left:  20px;
+  margin-bottom: -15px;
+}
+
+.sign_up_form .form_buttons {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.required {
+  position: relative;
+  top: 18px;
+  left: -14px;
 }
 
 /*This is the drop down box to send a text*/

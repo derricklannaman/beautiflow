@@ -36,19 +36,19 @@
  </div>
  <!-- <div class="clear"></div> -->
  <!-- ======================================== -->
- <div id="client_photo_panel">
+<!--  <div id="client_photo_panel">
   <div class='field'>
-    <%= f.label :photo %>
-    <%= f.file_field :photo %>
-    <%= f.hidden_field :photo_cache %>
-  </div>
+    <%#= f.label :photo %>
+    <%#= f.file_field :photo %>
+    <%#= f.hidden_field :photo_cache %>
+  </div> -->
 
-  <div class='field'>
-    <%= f.text_field :remote_photo_url %>
+<!--   <div class='field'>
+    <%#= f.text_field :remote_photo_url %>
   </div>
   <div class='client_img_field'>
-    <%= image_tag(@client.photo_url) if @client.photo? %>
-  </div>
+    <%#= image_tag(@client.photo_url) if @client.photo? %>
+  </div> -->
 
   <div class="form_buttons" id="update_client_img"></div>
     <%= f.submit class: 'btn btn-success' %>

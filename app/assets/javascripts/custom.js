@@ -82,44 +82,6 @@ function getFormattedDate(date){
 
 }
 // =====================
- // function delete_appointment(){
-
- //  alertify.confirm( "Are you sure you want to delete this appointment?", function (e) {
-//   if (e) {
-
-//     $.ajax({
-//       type: "DELETE",
-//       url: appointment_path,
-//       dataType: 'json'
-//     }).done(function( msg ) {
-//         console.log('it should delete');
-
-//     });
-
-//   }
-//   else  {
-//     console.log('we clicked cancel');
-//   }
-
-//  });
-
-// }
-
-
-// function b2(){
-//   alertify.log("hey", "warning");
-
-// }
- // function client_added(){
- //    // alert('yes');
- //   alertify.success("positive notification");
-
- // }
-// function b4(){
-//   alertify.error("negative notication!");
-
-// }
-
 
 
 function hide_text_box(){
@@ -176,7 +138,7 @@ function backlight_off(){
 
 
 function reveal_drop(){
-  $('#sign-in-dropdown').slideDown(500);
+  $('#sign-in-dropdown').toggleSlide(500);
 }
 
 // function hide_dropped_form(){

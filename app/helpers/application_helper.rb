@@ -4,7 +4,7 @@ module ApplicationHelper
     if @authenticated_user
       link_to "Sign Out", signout_path
     else
-      link_to "Sign In", signin_path
+      link_to " ", signin_path
     end
   end
 

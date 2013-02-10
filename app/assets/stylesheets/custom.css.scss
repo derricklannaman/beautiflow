@@ -3,19 +3,18 @@
 
 body {
   background: -webkit-gradient(radial, center center, 6, center center, 1200, from(#FFF), to(#9051b2));
-  /*background: #FF9200; #9051b2*/
 }
+
 #main_photo {
   width:  980px;
   height: 475px;
   margin-top: -101px;
   margin-left:  50px;
-  background: url('http://woman.thenest.com/DM-Resize/photos.demandstudios.com/getty/article/165/7/57279521.jpg?w=600&h=600&keep_ratio=1') center center no-repeat;
+  /*background: url('http://woman.thenest.com/DM-Resize/photos.demandstudios.com/getty/article/165/7/57279521.jpg?w=600&h=600&keep_ratio=1') center center no-repeat;*/
+  background: url('beautiflow_index-pic.jpg') center center no-repeat;
   background-size: cover;
-  /*box-shadow: inset 55px 34px 67px #D1B7DF;*/
-  /*-webkit-filter: blur(3px);*/
+  box-shadow: 4px 4px 30px #000;
 }
-
 
 
 .container {
@@ -314,6 +313,14 @@ input {
 #main-greeting span {
   font-size: 50px;
 }
+
+
+#tag {
+    font-size:  16px;
+    text-shadow:  none;
+    margin-top: -22px;
+  }
+
 
 #sign-in-dropdown {
   margin: 0 auto;

@@ -138,7 +138,7 @@ function backlight_off(){
 
 
 function reveal_drop(){
-  $('#sign-in-dropdown').toggleSlide(500);
+  $('#sign-in-dropdown').slideDown(500);
 }
 
 // function hide_dropped_form(){

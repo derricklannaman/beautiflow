@@ -22,6 +22,8 @@ class Client < ActiveRecord::Base
 
   belongs_to :stylist
   has_many :appointments
+
+  # validates :client_email, :allow_blank => true
   # has_many   :services, :through => :transactions
 
   # mount_uploader :photo, PictureUploader

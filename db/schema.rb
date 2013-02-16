@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218033711) do
+ActiveRecord::Schema.define(:version => 20130216014513) do
 
   create_table "appointments", :force => true do |t|
     t.datetime "created_at",       :null => false
@@ -38,8 +38,6 @@ ActiveRecord::Schema.define(:version => 20121218033711) do
     t.datetime "updated_at",     :null => false
     t.integer  "stylist_id"
   end
-
-  add_index "clients", ["client_email"], :name => "index_clients_on_client_email", :unique => true
 
   create_table "profiles", :force => true do |t|
     t.string   "name"

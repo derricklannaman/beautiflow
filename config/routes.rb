@@ -23,7 +23,6 @@ Beautiflow::Application.routes.draw do
 
  # routes for pages controller
   scope :controller    => :pages do
-    # match '/pricing'   => :pricing
     match '/about'     => :about
     match '/contact'   => :contact
     match '/news'      => :news
